@@ -1,0 +1,236 @@
+@model WebBanNuocMVC.Data.Drink
+@using WebBanNuocMVC.Data
+@{
+    ViewData["Title"] = Model.DrinkName;
+    Layout = "_CustomerLayout";
+    var relatedProducts = ViewBag.RelatedProducts as List<Drink> ?? new List<Drink>();
+}
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">@Model.DrinkName</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Shop" asp-action="Index">Shop</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">@Model.DrinkName</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-6 mb-5">
+                <div class="product-detail-image">
+                    <div class="main-image-wrapper">
+                        <img class="main-product-image"
+                             src="@Url.Content(string.IsNullOrEmpty(Model.Image) ? "~/img/menu-1.jpg" : Model.Image)"
+                             alt="@Model.DrinkName">
+                        <div class="image-badge"><i class="fas fa-coffee"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="product-detail-info">
+                    <div class="product-top-meta">
+                        <span class="product-category-badge"><i class="fas fa-tag mr-2"></i>@(Model.Category?.CategoryName ?? "Other")</span>
+                        <span class="product-data-chip">Product ID #@Model.DrinkId</span>
+                    </div>
+
+                    <h1 class="product-detail-title">@Model.DrinkName</h1>
+
+                    <div class="product-price-section">
+                        <span class="product-price">@((Model.Price ?? 0).ToString("N0"))đ</span>
+                        <span class="price-label">per item</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h5 class="section-label"><i class="fas fa-info-circle mr-2"></i>Description</h5>
+                        <p>@(Model.Description ?? "Delicious drink made with premium ingredients.")</p>
+                    </div>
+
+                    <div class="product-facts-grid">
+                        <div class="fact-card">
+                            <div class="fact-label">Category</div>
+                            <div class="fact-value">@(Model.Category?.CategoryName ?? "Other")</div>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-label">Price band</div>
+                            <div class="fact-value">@(((Model.Price ?? 0) >= 45000) ? "Premium" : "Standard")</div>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-label">Availability</div>
+                            <div class="fact-value">Ready to order</div>
+                        </div>
+                    </div>
+
+                    <div class="quantity-section">
+                        <h5 class="section-label"><i class="fas fa-sort-numeric-up mr-2"></i>Quantity</h5>
+                        <div class="quantity-controls">
+                            <button class="qty-btn qty-decrease" type="button" onclick="decreaseQuantity()"><i class="fa fa-minus"></i></button>
+                            <input type="number" id="quantity" class="qty-display" value="1" min="1" max="99" readonly>
+                            <button class="qty-btn qty-increase" type="button" onclick="increaseQuantity()"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-action btn-add-cart" onclick="addToCart(@Model.DrinkId)">
+                            <i class="fa fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                        <button class="btn-action btn-buy-now" onclick="buyNow(@Model.DrinkId)">
+                            <i class="fa fa-bolt mr-2"></i>Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (relatedProducts.Any())
+        {
+            <div class="related-products-section mt-5 pt-3">
+                <div class="related-header text-center mb-4">
+                    <div class="related-badge"><i class="fas fa-heart mr-2"></i>Same category</div>
+                    <h2 class="related-title">Related Products</h2>
+                    <p class="related-subtitle">Items users are likely to compare with this product.</p>
+                </div>
+
+                <div class="row">
+                    @foreach (var drink in relatedProducts)
+                    {
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="related-product-card">
+                                <div class="related-product-image">
+                                    <img src="@Url.Content(string.IsNullOrEmpty(drink.Image) ? "~/img/menu-1.jpg" : drink.Image)"
+                                         alt="@drink.DrinkName">
+                                    <div class="related-product-overlay">
+                                        <button class="btn-related-action btn-related-cart" onclick="addToCart(@drink.DrinkId); return false;"><i class="fa fa-shopping-cart"></i></button>
+                                        <a asp-action="ProductDetail" asp-route-id="@drink.DrinkId" class="btn-related-action btn-related-view"><i class="fa fa-eye"></i></a>
+                                    </div>
+                                </div>
+                                <div class="related-product-info">
+                                    <a asp-action="ProductDetail" asp-route-id="@drink.DrinkId" class="related-product-name">@drink.DrinkName</a>
+                                    <div class="related-product-price">@((drink.Price ?? 0).ToString("N0"))đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function increaseQuantity() {
+            var qty = document.getElementById('quantity');
+            var currentValue = parseInt(qty.value);
+            if (currentValue < 99) qty.value = currentValue + 1;
+        }
+
+        function decreaseQuantity() {
+            var qty = document.getElementById('quantity');
+            var currentValue = parseInt(qty.value);
+            if (currentValue > 1) qty.value = currentValue - 1;
+        }
+
+        function addToCart(drinkId) {
+            var quantity = parseInt(document.getElementById('quantity').value);
+            window.addToCart(drinkId, quantity);
+        }
+
+        function buyNow(drinkId) {
+            var quantity = parseInt(document.getElementById('quantity').value);
+            $.ajax({
+                url: '/Cart/AddToCart',
+                type: 'POST',
+                data: { drinkId: drinkId, quantity: quantity },
+                success: function (response) {
+                    if (response.success) window.location.href = '/Cart';
+                }
+            });
+        }
+    </script>
+}
+
+<style>
+    .product-detail-info,
+    .main-image-wrapper,
+    .fact-card,
+    .related-product-card {
+        background: #2c1f14;
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .main-image-wrapper { padding: 24px; position: relative; overflow: hidden; }
+    .main-product-image { width: 100%; height: 500px; object-fit: cover; border-radius: 16px; }
+    .image-badge {
+        position: absolute; top: 40px; right: 40px; width: 60px; height: 60px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: #fff; font-size: 22px;
+    }
+
+    .product-detail-info { padding: 30px; color: #fff; }
+    .product-top-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .product-category-badge, .product-data-chip {
+        display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 700;
+    }
+    .product-category-badge { background: rgba(218, 159, 91, 0.16); color: #da9f5b; }
+    .product-data-chip { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.72); }
+    .product-detail-title { color: #fff; font-size: 42px; font-weight: 700; margin-bottom: 16px; }
+    .product-price-section { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+    .product-price { color: #da9f5b; font-size: 38px; font-weight: 700; }
+    .price-label, .product-description p { color: rgba(255,255,255,0.72); }
+    .section-label { color: #fff; font-weight: 700; margin-bottom: 12px; }
+
+    .product-facts-grid {
+        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0;
+    }
+    .fact-card { padding: 18px; border: 1px solid rgba(255,255,255,0.06); }
+    .fact-label { color: rgba(255,255,255,0.62); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .fact-value { color: #fff; font-size: 18px; font-weight: 700; }
+
+    .quantity-controls { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+    .qty-btn {
+        width: 40px; height: 40px; border-radius: 10px; border: none; background: rgba(255,255,255,0.08); color: #fff;
+    }
+    .qty-display {
+        width: 72px; text-align: center; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: rgba(0,0,0,0.16); color: #fff; padding: 10px;
+    }
+
+    .action-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-action {
+        border: none; border-radius: 999px; padding: 14px 24px; font-weight: 700; transition: all 0.3s ease;
+    }
+    .btn-add-cart, .btn-buy-now { background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: #fff; }
+
+    .related-badge {
+        display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px; border-radius: 999px;
+        background: rgba(218, 159, 91, 0.16); color: #da9f5b; font-weight: 700; margin-bottom: 10px;
+    }
+    .related-title { color: #fff; font-weight: 700; }
+    .related-subtitle { color: rgba(255,255,255,0.7); }
+    .related-product-card { overflow: hidden; height: 100%; }
+    .related-product-image { position: relative; height: 220px; }
+    .related-product-image img { width: 100%; height: 100%; object-fit: cover; }
+    .related-product-overlay {
+        position: absolute; inset: 0; background: rgba(44, 31, 20, 0.92); display: flex; align-items: center; justify-content: center; gap: 10px;
+        opacity: 0; transition: opacity 0.3s ease;
+    }
+    .related-product-card:hover .related-product-overlay { opacity: 1; }
+    .btn-related-action {
+        width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: #fff; border: none;
+    }
+    .related-product-info { padding: 18px; }
+    .related-product-name { color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; }
+    .related-product-price { color: #da9f5b; font-size: 22px; font-weight: 700; margin-top: 8px; }
+
+    @@media (max-width: 991.98px) {
+        .product-facts-grid { grid-template-columns: 1fr; }
+        .product-detail-title { font-size: 34px; }
+    }
+</style>

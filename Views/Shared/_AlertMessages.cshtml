@@ -1,0 +1,221 @@
+@* Toast Notification Partial View *@
+@* Displays success, error, warning, and info messages from TempData as toast notifications *@
+
+<div id="toast-container" style="position: fixed; top: 80px; right: 20px; z-index: 9999; min-width: 300px; max-width: 400px;"></div>
+
+@if (TempData["Success"] != null && !string.IsNullOrWhiteSpace(TempData["Success"]?.ToString()))
+{
+    var message = TempData["Success"].ToString().Replace("'", "\\'").Replace("\n", " ").Replace("\r", "");
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showToast('success', '@Html.Raw(message)');
+        });
+    </script>
+}
+
+@if (TempData["Error"] != null && !string.IsNullOrWhiteSpace(TempData["Error"]?.ToString()))
+{
+    var message = TempData["Error"].ToString().Replace("'", "\\'").Replace("\n", " ").Replace("\r", "");
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showToast('error', '@Html.Raw(message)');
+        });
+    </script>
+}
+
+@if (TempData["Warning"] != null && !string.IsNullOrWhiteSpace(TempData["Warning"]?.ToString()))
+{
+    var message = TempData["Warning"].ToString().Replace("'", "\\'").Replace("\n", " ").Replace("\r", "");
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showToast('warning', '@Html.Raw(message)');
+        });
+    </script>
+}
+
+@if (TempData["Info"] != null && !string.IsNullOrWhiteSpace(TempData["Info"]?.ToString()))
+{
+    var message = TempData["Info"].ToString().Replace("'", "\\'").Replace("\n", " ").Replace("\r", "");
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            showToast('info', '@Html.Raw(message)');
+        });
+    </script>
+}
+
+<style>
+    .toast-notification {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 16px 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        animation: slideInRight 0.3s ease-out;
+        border-left: 4px solid;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .toast-notification.toast-success {
+        border-left-color: #28a745;
+    }
+    
+    .toast-notification.toast-error {
+        border-left-color: #dc3545;
+    }
+    
+    .toast-notification.toast-warning {
+        border-left-color: #ffc107;
+    }
+    
+    .toast-notification.toast-info {
+        border-left-color: #17a2b8;
+    }
+    
+    .toast-icon {
+        font-size: 24px;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    .toast-success .toast-icon {
+        color: #28a745;
+    }
+    
+    .toast-error .toast-icon {
+        color: #dc3545;
+    }
+    
+    .toast-warning .toast-icon {
+        color: #ffc107;
+    }
+    
+    .toast-info .toast-icon {
+        color: #17a2b8;
+    }
+    
+    .toast-content {
+        flex: 1;
+    }
+    
+    .toast-title {
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #3a2c1f;
+    }
+    
+    .toast-message {
+        color: #6c757d;
+        font-size: 14px;
+    }
+    
+    .toast-close {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #6c757d;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 12px;
+        line-height: 1;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+    }
+    
+    .toast-close:hover {
+        opacity: 1;
+    }
+    
+    .toast-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: currentColor;
+        opacity: 0.3;
+        animation: progressBar 5s linear;
+    }
+    
+    @@keyframes slideInRight {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @@keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+    
+    @@keyframes progressBar {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 0%;
+        }
+    }
+</style>
+
+<script>
+    function showToast(type, message) {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        
+        const icons = {
+            success: 'fas fa-check-circle',
+            error: 'fas fa-exclamation-circle',
+            warning: 'fas fa-exclamation-triangle',
+            info: 'fas fa-info-circle'
+        };
+        
+        const titles = {
+            success: 'Success!',
+            error: 'Error!',
+            warning: 'Warning!',
+            info: 'Info!'
+        };
+        
+        const toast = document.createElement('div');
+        toast.className = `toast-notification toast-${type}`;
+        toast.innerHTML = `
+            <i class="${icons[type]} toast-icon"></i>
+            <div class="toast-content">
+                <div class="toast-title">${titles[type]}</div>
+                <div class="toast-message">${message}</div>
+            </div>
+            <button class="toast-close" onclick="closeToast(this)">&times;</button>
+            <div class="toast-progress"></div>
+        `;
+        
+        container.appendChild(toast);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            closeToast(toast.querySelector('.toast-close'));
+        }, 5000);
+    }
+    
+    function closeToast(button) {
+        const toast = button.closest('.toast-notification');
+        if (toast) {
+            toast.style.animation = 'slideOutRight 0.3s ease-out';
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }
+    }
+</script>

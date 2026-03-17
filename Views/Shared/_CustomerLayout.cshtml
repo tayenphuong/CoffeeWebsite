@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"] - KOFFEE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="~/img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="~/css/style.min.css" rel="stylesheet">
+
+    <style>
+        .topbar-soft {
+            background: rgba(17, 12, 8, 0.92);
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+
+        .topbar-soft a {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .nav-pill-cart {
+            background: rgba(218, 159, 91, 0.18);
+            border: 1px solid rgba(218, 159, 91, 0.35);
+            border-radius: 999px;
+            padding: 8px 14px !important;
+            margin-left: 10px;
+        }
+
+        .nav-quick-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 22px;
+            height: 22px;
+            margin-left: 8px;
+            padding: 0 6px;
+            border-radius: 999px;
+            background: #da9f5b;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .nav-user-chip {
+            background: rgba(255,255,255,0.08);
+            border-radius: 999px;
+            padding: 8px 14px;
+        }
+
+        .footer .footer-mini-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 18px;
+            height: 100%;
+        }
+
+        .footer .footer-mini-card p,
+        .footer .footer-mini-card a,
+        .footer .footer-mini-card li {
+            color: rgba(255,255,255,0.78);
+        }
+
+        .footer-link-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-link-list li + li {
+            margin-top: 10px;
+        }
+
+        .footer-link-list a:hover {
+            color: #da9f5b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    @{
+        var isFromAdmin = string.Equals(Context.Request.Query["returnToAdmin"].ToString(), "true", StringComparison.OrdinalIgnoreCase);
+        var sessionRole = Context.Session.GetString("Role");
+        var isAdmin = User.IsInRole("Admin") || string.Equals(sessionRole, "Admin", StringComparison.OrdinalIgnoreCase);
+        var returnToAdminValue = isFromAdmin ? "true" : null;
+    }
+    <div class="container-fluid px-0 topbar-soft py-2 d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fa fa-coffee mr-2"></i>Freshly brewed drinks, quick ordering, and a clearer product experience.
+            </div>
+            <div>
+                <a asp-controller="Shop" asp-action="Menu" asp-route-returnToAdmin="@returnToAdminValue" class="mr-3"><i class="fa fa-book-open mr-1"></i>Menu</a>
+                <a asp-controller="Customer" asp-action="MyOrders" asp-route-returnToAdmin="@returnToAdminValue"><i class="fa fa-receipt mr-1"></i>My Orders</a>
+                            @if (isAdmin && isFromAdmin)
+                {
+                    <a asp-controller="Admin" asp-action="Dashboard" class="btn btn-sm btn-outline-light ml-3">
+                        <i class="fa fa-arrow-left mr-1"></i>Quay lại quản lý
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a asp-controller="Home" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue" class="navbar-brand px-lg-4 m-0">
+                <h1 class="m-0 display-4 text-uppercase text-white">KOFFEE</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 align-items-lg-center">
+                    
+                    <a asp-controller="Home" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">Home</a>
+                    <a asp-controller="Shop" asp-action="Menu" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Shop" && ViewContext.RouteData.Values["action"]?.ToString() == "Menu" ? "active" : "")">Menu</a>
+                    <a asp-controller="Shop" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Shop" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">Shop</a>
+                    <a asp-controller="Home" asp-action="About" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "About" ? "active" : "")">About</a>
+                    <a asp-controller="Home" asp-action="Contact" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Contact" ? "active" : "")">Contact</a>
+
+                    <a asp-controller="Cart" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link nav-pill-cart @(ViewContext.RouteData.Values["controller"]?.ToString() == "Cart" ? "active" : "")">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span id="cart-count" class="nav-quick-badge" style="display:none;">0</span>
+                    </a>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+                        <div class="nav-item dropdown ml-lg-2">
+                            <a href="#" class="nav-link dropdown-toggle nav-user-chip" data-toggle="dropdown">
+                                <i class="fas fa-user-circle mr-2"></i>@User.Identity.Name
+                            </a>
+                            <div class="dropdown-menu text-capitalize dropdown-menu-right">
+                                <a asp-controller="Customer" asp-action="MyOrders" asp-route-returnToAdmin="@returnToAdminValue" class="dropdown-item">My Orders</a>
+                                <div class="dropdown-divider"></div>
+
+                                @if (isAdmin && isFromAdmin)
+                                {
+                                    <a asp-controller="Admin" asp-action="Dashboard" class="dropdown-item">
+                                        Quay lại quản lý
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                }
+                                <form asp-controller="Auth" asp-action="Logout" method="post" style="display:inline;">
+                                    <input type="hidden" name="returnToAdmin" value="@returnToAdminValue" />
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <a asp-controller="Auth" asp-action="Login" asp-route-returnToAdmin="@returnToAdminValue" class="nav-item nav-link ml-lg-2">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    @await Html.PartialAsync("_AlertMessages")
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-mini-card">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Store Info</h4>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Modern coffee ordering experience</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>Hotline available during opening hours</p>
+                    <p class="mb-0"><i class="fa fa-envelope mr-2"></i>support@koffee.local</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-mini-card">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Navigate</h4>
+                    <ul class="footer-link-list">
+                        <li><a asp-controller="Home" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue">Homepage</a></li>
+                        <li><a asp-controller="Shop" asp-action="Menu" asp-route-returnToAdmin="@returnToAdminValue">Full Menu</a></li>
+                        <li><a asp-controller="Shop" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue">Browse Products</a></li>
+                        <li><a asp-controller="Cart" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue">Shopping Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-mini-card">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Open Hours</h4>
+                    <h6 class="text-white text-uppercase">Monday - Friday</h6>
+                    <p>8:00 AM - 8:00 PM</p>
+                    <h6 class="text-white text-uppercase">Saturday - Sunday</h6>
+                    <p class="mb-0">9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-mini-card">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Quick Actions</h4>
+                    <p>Go straight to the data-heavy screens that matter most.</p>
+                    <a asp-controller="Customer" asp-action="MyOrders" asp-route-returnToAdmin="@returnToAdminValue" class="btn btn-outline-light btn-sm mb-2 d-inline-block">View Orders</a>
+                    <a asp-controller="Checkout" asp-action="Index" asp-route-returnToAdmin="@returnToAdminValue" class="btn btn-primary btn-sm d-inline-block">Checkout</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">Copyright &copy; @DateTime.Now.Year KOFFEE. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/js/cart.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

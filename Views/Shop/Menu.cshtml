@@ -1,0 +1,234 @@
+@model IEnumerable<IGrouping<string, WebBanNuocMVC.Data.Drink>>
+
+@{
+    ViewData["Title"] = "KOFFEE - Menu";
+    Layout = "_CustomerLayout";
+    var totalItems = ViewBag.TotalItems != null ? (int)ViewBag.TotalItems : 0;
+    var totalGroups = ViewBag.TotalGroups != null ? (int)ViewBag.TotalGroups : 0;
+}
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Menu</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Menu</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pb-4">
+    <div class="container">
+        <div class="menu-insight-bar">
+            <div class="menu-insight-box">
+                <span class="menu-insight-label">Category groups</span>
+                <strong>@totalGroups</strong>
+            </div>
+            <div class="menu-insight-box">
+                <span class="menu-insight-label">Menu items</span>
+                <strong>@totalItems</strong>
+            </div>
+            <div class="menu-insight-box menu-insight-wide">
+                <span class="menu-insight-label">Why this page is better</span>
+                <strong>Each category now shows item counts and a clearer product hierarchy.</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu & Pricing</h4>
+            <h1 class="display-4">Our Menu</h1>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var categoryGroup in Model)
+            {
+                var categoryName = categoryGroup.Key ?? "Other";
+                var drinks = categoryGroup.ToList();
+
+                <div class="menu-category-section mb-5">
+                    <div class="category-header">
+                        <div>
+                            <h2 class="category-title mb-2">@categoryName</h2>
+                            <p class="category-subtitle mb-0">@drinks.Count item(s) currently available in this section.</p>
+                        </div>
+                        <span class="category-badge">@drinks.Count</span>
+                    </div>
+
+                    <div class="row">
+                        @foreach (var drink in drinks)
+                        {
+                            <div class="col-lg-6 mb-4">
+                                <div class="menu-item-card">
+                                    <div class="menu-item-image">
+                                        <img src="@Url.Content(string.IsNullOrEmpty(drink.Image) ? "~/img/menu-1.jpg" : drink.Image)"
+                                             alt="@drink.DrinkName">
+                                        <div class="menu-item-overlay">
+                                            <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@drink.DrinkId"
+                                               class="btn-view-detail">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item-content">
+                                        <div class="menu-item-header">
+                                            <h4 class="menu-item-name">
+                                                <a asp-controller="Shop" asp-action="ProductDetail" asp-route-id="@drink.DrinkId">
+                                                    @drink.DrinkName
+                                                </a>
+                                            </h4>
+                                            <span class="menu-item-price">@((drink.Price ?? 0).ToString("N0"))đ</span>
+                                        </div>
+                                        <div class="menu-meta-row">
+                                            <span class="menu-meta-chip">ID #@drink.DrinkId</span>
+                                            <span class="menu-meta-chip">@categoryName</span>
+                                        </div>
+                                        <p class="menu-item-description">@(drink.Description ?? "Delicious drink")</p>
+                                        <button class="btn-add-to-cart" onclick="addToCart(@drink.DrinkId, 1)">
+                                            <i class="fa fa-shopping-cart mr-2"></i>Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="empty-menu-state text-center">
+                <i class="fa fa-coffee mb-3"></i>
+                <p class="text-white mb-0">No menu items available at the moment.</p>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/cart.js"></script>
+}
+
+<style>
+    .menu-insight-bar,
+    .menu-item-card,
+    .empty-menu-state {
+        background: #2c1f14;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .menu-insight-bar {
+        padding: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .menu-insight-box {
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.04);
+        color: #fff;
+    }
+
+    .menu-insight-label {
+        display: block;
+        color: rgba(255,255,255,0.65);
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .menu-insight-box strong { font-size: 28px; }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(218, 159, 91, 0.18);
+    }
+
+    .category-title {
+        font-size: 38px;
+        font-weight: 700;
+        color: #da9f5b;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .category-subtitle { color: rgba(255,255,255,0.7); }
+    .category-badge {
+        min-width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .menu-item-card {
+        overflow: hidden;
+        transition: all 0.35s ease;
+        display: flex;
+        height: 100%;
+    }
+
+    .menu-item-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 28px rgba(218, 159, 91, 0.2);
+    }
+
+    .menu-item-image { position: relative; width: 180px; flex-shrink: 0; overflow: hidden; }
+    .menu-item-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .menu-item-card:hover .menu-item-image img { transform: scale(1.08); }
+    .menu-item-overlay {
+        position: absolute; inset: 0; background: rgba(44, 31, 20, 0.9); display: flex; align-items: center; justify-content: center;
+        opacity: 0; transition: opacity 0.3s ease;
+    }
+    .menu-item-card:hover .menu-item-overlay { opacity: 1; }
+    .btn-view-detail {
+        width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);
+        color: white; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none;
+    }
+
+    .menu-item-content { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .menu-item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 10px; }
+    .menu-item-name { font-size: 22px; font-weight: 700; margin: 0; }
+    .menu-item-name a { color: white; text-decoration: none; }
+    .menu-item-name a:hover { color: #da9f5b; }
+    .menu-item-price { font-size: 24px; font-weight: 700; color: #da9f5b; white-space: nowrap; }
+    .menu-meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .menu-meta-chip {
+        display: inline-block; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600;
+    }
+    .menu-item-description { color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+    .btn-add-to-cart {
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: white; border: none; padding: 12px 24px;
+        border-radius: 50px; font-weight: 600; font-size: 14px; align-self: flex-start;
+    }
+
+    .empty-menu-state { padding: 48px 24px; }
+    .empty-menu-state i { font-size: 42px; color: #da9f5b; }
+
+    @@media (max-width: 991.98px) {
+        .menu-insight-bar { grid-template-columns: 1fr; }
+        .menu-item-card { flex-direction: column; }
+        .menu-item-image { width: 100%; height: 240px; }
+        .category-header { align-items: flex-start; flex-direction: column; }
+    }
+</style>

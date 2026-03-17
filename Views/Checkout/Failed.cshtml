@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "KOFFEE - Payment Failed";
+    Layout = "_CustomerLayout";
+}
+
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Payment Failed</h1>
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="bg-secondary rounded p-5 text-center">
+                    <i class="fas fa-times-circle fa-5x text-danger mb-4"></i>
+                    <h2 class="text-white mb-3">Payment Failed</h2>
+                    <p class="text-white-50 mb-4">
+                        Unfortunately, your payment could not be processed. Please try again or use a different payment method.
+                    </p>
+
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        Your order has not been placed. No charges were made.
+                    </div>
+
+                    <div class="mt-4">
+                        <a asp-controller="Cart" asp-action="Index" class="btn btn-primary btn-lg mr-3">
+                            <i class="fa fa-shopping-cart mr-2"></i>Back to Cart
+                        </a>
+                        <a asp-controller="Checkout" asp-action="Payment" class="btn btn-warning btn-lg">
+                            <i class="fa fa-redo mr-2"></i>Try Again
+                        </a>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-white-50">
+                            Need help? <a href="#" class="text-primary">Contact Support</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

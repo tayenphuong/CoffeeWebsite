@@ -1,0 +1,39 @@
+﻿@model WebBanNuocMVC.Data.Order
+@{ ViewData["Title"] = "Delete Order"; }
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2 style="color: #dc3545; font-weight: bold;"><i class="fas fa-exclamation-triangle mr-2"></i>Delete Order</h2>
+            <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Back</a>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="alert alert-danger"><h4 class="alert-heading"><i class="fas fa-exclamation-circle mr-2"></i>Are you sure?</h4><p class="mb-0">This will permanently delete the order and all related data. This action cannot be undone.</p></div>
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold text-white"><i class="fas fa-shopping-cart mr-2"></i>Order Information</h5>
+                </div>
+                <div class="card-body p-4">
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4"><i class="fas fa-hashtag mr-2 text-danger"></i>Order ID:</dt><dd class="col-sm-8 font-weight-bold">#@Model.OrderId</dd>
+                        <dt class="col-sm-4"><i class="fas fa-calendar mr-2 text-danger"></i>Date:</dt><dd class="col-sm-8">@Model.OrderDate?.ToString("dd/MM/yyyy HH:mm")</dd>
+                        <dt class="col-sm-4"><i class="fas fa-user mr-2 text-danger"></i>Customer:</dt><dd class="col-sm-8">@(Model.Customer?.CustomerName ?? "N/A")</dd>
+                        <dt class="col-sm-4"><i class="fas fa-info-circle mr-2 text-danger"></i>Status:</dt><dd class="col-sm-8"><span class="badge badge-secondary">@Model.Status</span></dd>
+                        <dt class="col-sm-4"><i class="fas fa-money-bill-wave mr-2 text-danger"></i>Total:</dt><dd class="col-sm-8"><span style="font-size:20px;font-weight:bold;color:#da9f5b;">@((Model.TotalAmount ?? 0).ToString("N0"))đ</span></dd>
+                    </dl>
+                    <hr class="my-4">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="OrderId" />
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg px-5"><i class="fas fa-times mr-2"></i>Cancel</a>
+                            <button type="submit" class="btn btn-danger btn-lg px-5" onclick="return confirm('Delete this order permanently?');"><i class="fas fa-trash-alt mr-2"></i>Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>.btn:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,0.2);transition:all 0.3s;}</style>

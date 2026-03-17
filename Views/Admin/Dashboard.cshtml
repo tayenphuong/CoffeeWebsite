@@ -1,0 +1,348 @@
+@{
+    ViewData["Title"] = "KOFFEE - Admin Dashboard";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid">
+    
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0" style="color: #3a2c1f; font-weight: bold;">
+            <i class="fas fa-tachometer-alt mr-2" style="color: #da9f5b;"></i>
+            KOFFEE Admin Dashboard
+        </h1>
+        <div class="text-muted">
+            <i class="far fa-calendar-alt mr-2"></i>
+            @DateTime.Now.ToString("dddd, dd MMMM yyyy")
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card stat-card-primary shadow-sm h-100">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="stat-label text-uppercase mb-1">
+                                Total Products
+                            </div>
+                            <div class="stat-value">@ViewBag.TotalDrinks</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card stat-card-success shadow-sm h-100">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="stat-label text-uppercase mb-1">
+                                Total Revenue
+                            </div>
+                            <div class="stat-value">@ViewBag.TotalRevenue.ToString("N0")đ</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card stat-card-info shadow-sm h-100">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="stat-label text-uppercase mb-1">
+                                Total Orders
+                            </div>
+                            <div class="stat-value">@ViewBag.TotalOrders</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card stat-card-warning shadow-sm h-100">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="stat-label text-uppercase mb-1">
+                                Total Customers
+                            </div>
+                            <div class="stat-value">@ViewBag.TotalCustomers</div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
+                        <i class="fas fa-bolt mr-2"></i>Quick Actions
+                    </h5>
+                </div>
+                <div class="card-body" style="background-color: #f8f9fa;">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <a asp-controller="Drinks" asp-action="Index" class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="quick-action-text">
+                                    <h6>Manage Products</h6>
+                                    <small>Add, edit or remove products</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <a asp-controller="Categories" asp-action="Index" class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #28a745 0%, #218838 100%);">
+                                    <i class="fas fa-list"></i>
+                                </div>
+                                <div class="quick-action-text">
+                                    <h6>Manage Categories</h6>
+                                    <small>Organize product categories</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <a asp-controller="Orders" asp-action="Index" class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="quick-action-text">
+                                    <h6>View Orders</h6>
+                                    <small>Manage customer orders</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <a asp-controller="Customers" asp-action="Index" class="quick-action-btn">
+                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="quick-action-text">
+                                    <h6>View Customers</h6>
+                                    <small>Customer information</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
+                        <i class="fas fa-clock mr-2"></i>Recent Orders
+                    </h5>
+                </div>
+                <div class="card-body" style="padding: 0;">
+                    @if (ViewBag.RecentOrders != null && ((List<WebBanNuocMVC.Data.Order>)ViewBag.RecentOrders).Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead style="background-color: #f8f9fa;">
+                                    <tr>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Order ID</th>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Customer</th>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Date</th>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Total</th>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Status</th>
+                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in (List<WebBanNuocMVC.Data.Order>)ViewBag.RecentOrders)
+                                    {
+                                        <tr>
+                                            <td><strong>#@order.OrderId</strong></td>
+                                            <td>
+                                                <i class="fas fa-user-circle mr-1" style="color: #da9f5b;"></i>
+                                                @(order.Customer?.CustomerName ?? "Guest")
+                                            </td>
+                                            <td>
+                                                <i class="far fa-calendar mr-1" style="color: #6c757d;"></i>
+                                                @order.OrderDate?.ToString("dd/MM/yyyy HH:mm")
+                                            </td>
+                                            <td><strong style="color: #28a745;">@((order.TotalAmount ?? 0).ToString("N0"))đ</strong></td>
+                                            <td>
+                                                <span class="badge badge-pill badge-@(order.Status == "Completed" ? "success" : order.Status == "Pending" ? "warning" : "info")">
+                                                    @order.Status
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Orders" asp-action="Details" asp-route-id="@order.OrderId" 
+                                                   class="btn btn-sm" style="background-color: #da9f5b; color: white;">
+                                                    <i class="fas fa-eye"></i> View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">No orders yet.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Statistics Cards */
+    .stat-card {
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        overflow: hidden;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
+    
+    .stat-card-primary {
+        border-left: 4px solid #da9f5b;
+    }
+    
+    .stat-card-success {
+        border-left: 4px solid #28a745;
+    }
+    
+    .stat-card-info {
+        border-left: 4px solid #17a2b8;
+    }
+    
+    .stat-card-warning {
+        border-left: 4px solid #ffc107;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #858796;
+        letter-spacing: 0.5px;
+    }
+    
+    .stat-value {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #3a2c1f;
+    }
+    
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+    }
+    
+    .stat-icon i {
+        font-size: 1.5rem;
+        color: #858796;
+    }
+    
+    /* Quick Action Buttons */
+    .quick-action-btn {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .quick-action-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        text-decoration: none;
+    }
+    
+    .quick-action-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        flex-shrink: 0;
+    }
+    
+    .quick-action-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .quick-action-text h6 {
+        margin: 0;
+        color: #3a2c1f;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    
+    .quick-action-text small {
+        color: #6c757d;
+        font-size: 0.75rem;
+    }
+    
+    /* Table Styling */
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .card {
+        border-radius: 10px;
+    }
+    
+    .card-header {
+        border-radius: 10px 10px 0 0 !important;
+    }
+</style>

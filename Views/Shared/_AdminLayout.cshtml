@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"] - Admin Panel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        #wrapper {
+            display: flex;
+            width: 100%;
+        }
+        
+        #sidebar-wrapper {
+            min-height: 100vh;
+            width: 250px;
+            background: linear-gradient(180deg, #3a2c1f 0%, #2c1f14 100%);
+            border-right: 1px solid #da9f5b;
+        }
+        
+        #page-content-wrapper {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        .sidebar-heading {
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #da9f5b;
+            text-align: center;
+            border-bottom: 1px solid #da9f5b;
+        }
+        
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .list-group-item:hover {
+            background-color: rgba(218, 159, 91, 0.1);
+            color: #da9f5b;
+            padding-left: 2rem;
+        }
+        
+        .list-group-item.active {
+            background-color: #da9f5b;
+            color: #fff;
+            border-left: 4px solid #fff;
+        }
+        
+        .list-group-item i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .navbar-admin {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #f8f9fa;
+        }
+        
+        .navbar-admin .navbar-brand {
+            color: #3a2c1f;
+            font-weight: bold;
+        }
+        
+        .user-info {
+            background-color: #f8f9fa;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .user-info:hover {
+            background-color: #e9ecef;
+        }
+        
+        .btn-logout {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+        }
+        
+        .btn-logout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+            color: white;
+        }
+        
+        #menu-toggle {
+            transition: all 0.3s ease;
+        }
+        
+        #menu-toggle:hover {
+            color: #da9f5b !important;
+            transform: scale(1.1);
+        }
+        
+        .content-area {
+            padding: 2rem;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            margin-bottom: 2rem;
+        }
+        
+        .card-header {
+            background-color: #3a2c1f;
+            color: #da9f5b;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background-color: #da9f5b;
+            border-color: #da9f5b;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c88a45;
+            border-color: #c88a45;
+        }
+        
+        .table thead th {
+            background-color: #3a2c1f;
+            color: #da9f5b;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <i class="fas fa-coffee"></i> ADMIN PANEL
+            </div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Admin" asp-action="Dashboard" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a asp-controller="Drinks" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-coffee"></i> Products
+                </a>
+                <a asp-controller="Categories" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-list"></i> Categories
+                </a>
+                <a asp-controller="Orders" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </a>
+                <a asp-controller="Customers" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users"></i> Customers
+                </a>
+                <a asp-controller="Accounts" asp-action="Index" class="list-group-item list-group-item-action">
+                    <i class="fas fa-user-shield"></i> Accounts
+                </a>
+                <hr style="border-color: #da9f5b; margin: 1rem 0;">
+                <a asp-controller="Home" asp-action="Index" asp-route-returnToAdmin="true" class="list-group-item list-group-item-action">
+                    <i class="fas fa-home"></i> View Website
+                </a>
+            </div>
+        </div>
+
+        
+        <div id="page-content-wrapper">
+            
+            <nav class="navbar navbar-expand-lg navbar-admin">
+                <button class="btn btn-link text-dark" id="menu-toggle" style="font-size: 1.5rem;">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-brand mb-0 h1 ml-3" style="color: #3a2c1f; font-weight: bold;">
+                    <i class="fas fa-coffee" style="color: #da9f5b;"></i>
+                    KOFFEE Admin
+                </div>
+                
+                <div class="ml-auto d-flex align-items-center">
+                    <div class="user-info mr-3">
+                        <i class="fas fa-user-circle" style="color: #da9f5b; font-size: 1.2rem;"></i>
+                        <span style="color: #3a2c1f; font-weight: 600; margin-left: 8px;">@User.Identity?.Name</span>
+                    </div>
+                    <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-logout">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                        </button>
+                    </form>
+                </div>
+            </nav>
+
+            
+            <div class="content-area">
+                @await Html.PartialAsync("_AlertMessages")
+                
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Toggle sidebar
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("d-none");
+        });
+        
+        // Highlight active menu
+        $(document).ready(function() {
+            var path = window.location.pathname;
+            $('.list-group-item').each(function() {
+                var href = $(this).attr('href');
+                if (path.indexOf(href) === 0) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+    </script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

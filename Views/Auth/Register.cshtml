@@ -1,0 +1,355 @@
+@model WebBanNuocMVC.Models.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "KOFFEE - Register";
+    Layout = "_CustomerLayout";
+}
+
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Register</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Register</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="auth-container">
+                    <div class="auth-header">
+                        <div class="auth-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h2 class="auth-title">Join Our Community</h2>
+                        <p class="auth-subtitle">Create an account and start your coffee experience</p>
+                    </div>
+
+                    @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+                    {
+                        <div class="alert alert-danger auth-alert" role="alert">
+                            <i class="fas fa-exclamation-circle mr-2"></i>
+                            <div asp-validation-summary="ModelOnly"></div>
+                        </div>
+                    }
+
+                    <form asp-action="Register" method="post" class="auth-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="Username" class="auth-label">
+                                        <i class="fas fa-user mr-2"></i>Username
+                                    </label>
+                                    <input asp-for="Username" class="auth-input" placeholder="Choose a username" />
+                                    <span asp-validation-for="Username" class="auth-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="FullName" class="auth-label">
+                                        <i class="fas fa-id-card mr-2"></i>Full Name
+                                    </label>
+                                    <input asp-for="FullName" class="auth-input" placeholder="Your full name" />
+                                    <span asp-validation-for="FullName" class="auth-error"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="Email" class="auth-label">
+                                        <i class="fas fa-envelope mr-2"></i>Email Address
+                                    </label>
+                                    <input asp-for="Email" class="auth-input" placeholder="Your email address" />
+                                    <span asp-validation-for="Email" class="auth-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="Phone" class="auth-label">
+                                        <i class="fas fa-phone mr-2"></i>Phone Number
+                                    </label>
+                                    <input asp-for="Phone" class="auth-input" placeholder="Your phone number" />
+                                    <span asp-validation-for="Phone" class="auth-error"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="Password" class="auth-label">
+                                        <i class="fas fa-lock mr-2"></i>Password
+                                    </label>
+                                    <input asp-for="Password" class="auth-input" placeholder="Create password (min 6 chars)" />
+                                    <span asp-validation-for="Password" class="auth-error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-auth">
+                                    <label asp-for="ConfirmPassword" class="auth-label">
+                                        <i class="fas fa-lock mr-2"></i>Confirm Password
+                                    </label>
+                                    <input asp-for="ConfirmPassword" class="auth-input" placeholder="Confirm your password" />
+                                    <span asp-validation-for="ConfirmPassword" class="auth-error"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="auth-btn auth-btn-primary" type="submit">
+                            <span>Create Account</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Already have an account?</p>
+                        <a asp-action="Login" class="auth-link">
+                            Login Here <i class="fas fa-sign-in-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Auth Container */
+    .auth-container {
+        background: #2c1f14;
+        border-radius: 24px;
+        padding: 48px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        border: 2px solid rgba(218, 159, 91, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .auth-container:hover {
+        box-shadow: 0 16px 48px rgba(218, 159, 91, 0.2);
+        border-color: rgba(218, 159, 91, 0.2);
+    }
+    
+    /* Auth Header */
+    .auth-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .auth-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        color: white;
+        box-shadow: 0 8px 24px rgba(218, 159, 91, 0.4);
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @@keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .auth-title {
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .auth-subtitle {
+        color: rgba(255,255,255,0.6);
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    /* Auth Form */
+    .auth-form {
+        margin-bottom: 32px;
+    }
+    
+    .form-group-auth {
+        margin-bottom: 24px;
+    }
+    
+    .auth-label {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    
+    .auth-label i {
+        color: #da9f5b;
+        font-size: 14px;
+    }
+    
+    .auth-input {
+        width: 100%;
+        padding: 18px 24px;
+        background: rgba(0,0,0,0.4);
+        border: 2px solid rgba(218, 159, 91, 0.2);
+        border-radius: 14px;
+        color: white;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+    
+    .auth-input:focus {
+        outline: none;
+        border-color: #da9f5b;
+        background: rgba(0,0,0,0.5);
+        box-shadow: 0 0 0 5px rgba(218, 159, 91, 0.12);
+        transform: translateY(-2px);
+    }
+    
+    .auth-input::placeholder {
+        color: rgba(255,255,255,0.35);
+    }
+    
+    /* Auth Button */
+    .auth-btn {
+        width: 100%;
+        padding: 18px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.5px;
+        margin-top: 16px;
+    }
+    
+    .auth-btn-primary {
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);
+        color: white;
+        box-shadow: 0 6px 20px rgba(218, 159, 91, 0.4);
+    }
+    
+    .auth-btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(218, 159, 91, 0.5);
+    }
+    
+    /* Divider */
+    .auth-divider {
+        text-align: center;
+        margin: 32px 0;
+        position: relative;
+    }
+    
+    .auth-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(218, 159, 91, 0.2);
+    }
+    
+    .auth-divider span {
+        background: #2c1f14;
+        padding: 0 20px;
+        color: rgba(255,255,255,0.5);
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Auth Footer */
+    .auth-footer {
+        text-align: center;
+    }
+    
+    .auth-footer p {
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 16px;
+        font-size: 15px;
+    }
+    
+    .auth-link {
+        display: inline-flex;
+        align-items: center;
+        color: #da9f5b;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .auth-link:hover {
+        color: #c88a45;
+        text-decoration: none;
+        transform: translateX(5px);
+    }
+    
+    /* Alert */
+    .auth-alert {
+        background: rgba(220, 53, 69, 0.15);
+        border: 2px solid rgba(220, 53, 69, 0.3);
+        color: #ff6b6b;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .auth-error {
+        color: #ff6b6b;
+        font-size: 13px;
+        margin-top: 8px;
+        display: block;
+        font-weight: 500;
+    }
+    
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .auth-container {
+            padding: 32px 24px;
+            border-radius: 20px;
+        }
+        
+        .auth-icon {
+            width: 64px;
+            height: 64px;
+            font-size: 28px;
+        }
+        
+        .auth-title {
+            font-size: 26px;
+        }
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

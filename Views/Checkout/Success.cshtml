@@ -1,0 +1,98 @@
+@model WebBanNuocMVC.Data.Order
+
+@{
+    ViewData["Title"] = "KOFFEE - Order Success";
+    Layout = "_CustomerLayout";
+}
+
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Order Success</h1>
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-secondary rounded p-5 text-center">
+                    <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+                    <h2 class="text-white mb-3">Order Placed Successfully!</h2>
+                    <p class="text-white-50 mb-4">Thank you for your order. We'll process it shortly.</p>
+
+                    <div class="bg-dark rounded p-4 mb-4">
+                        <h4 class="text-primary mb-3">Order Details</h4>
+                        <div class="row text-white">
+                            <div class="col-md-6 text-left">
+                                <p><strong>Order ID:</strong> #@Model.OrderId</p>
+                                <p><strong>Order Date:</strong> @Model.OrderDate?.ToString("dd/MM/yyyy HH:mm")</p>
+                                <p><strong>Status:</strong> <span class="badge badge-warning">@Model.Status</span></p>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <p><strong>Customer:</strong> @Model.Customer?.CustomerName</p>
+                                <p><strong>Phone:</strong> @Model.Customer?.Phone</p>
+                                <p><strong>Email:</strong> @Model.Customer?.Email</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark rounded p-4 mb-4">
+                        <h5 class="text-white mb-3">Order Items</h5>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.OrderDetails)
+                                    {
+                                        <tr>
+                                            <td>@item.Drink?.DrinkName</td>
+                                            <td>@((item.UnitPrice ?? 0).ToString("N0"))đ</td>
+                                            <td>@item.Quantity</td>
+                                            <td>@(((item.UnitPrice ?? 0) * (item.Quantity ?? 0)).ToString("N0"))đ</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3" class="text-right"><strong>Total:</strong></td>
+                                        <td><strong class="text-primary">@((Model.TotalAmount ?? 0).ToString("N0"))đ</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark rounded p-4 mb-4">
+                        <h5 class="text-white mb-3">Delivery Address</h5>
+                        <p class="text-white-50 mb-0">@Model.Customer?.Address</p>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        We'll contact you shortly to confirm your order. Please keep your phone available.
+                    </div>
+
+                    <div class="mt-4">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg mr-3">
+                            <i class="fa fa-home mr-2"></i>Back to Home
+                        </a>
+                        <a asp-controller="Shop" asp-action="Index" class="btn btn-success btn-lg">
+                            <i class="fa fa-shopping-bag mr-2"></i>Continue Shopping
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,144 @@
+﻿@model WebBanNuocMVC.Data.Order
+
+@{
+    ViewData["Title"] = "Edit Order";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 style="color: #3a2c1f; font-weight: bold;">
+                    <i class="fas fa-edit mr-2" style="color: #da9f5b;"></i>
+                    Edit Order
+                </h2>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
+                        <i class="fas fa-shopping-cart mr-2"></i>Order Information
+                    </h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        <input type="hidden" asp-for="OrderId" />
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="TableId" class="font-weight-bold">
+                                        <i class="fas fa-chair mr-2" style="color: #da9f5b;"></i>Table
+                                    </label>
+                                    <select asp-for="TableId" class="form-control form-control-lg" asp-items="ViewBag.TableId">
+                                        <option value="">-- Select Table --</option>
+                                    </select>
+                                    <span asp-validation-for="TableId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="CustomerId" class="font-weight-bold">
+                                        <i class="fas fa-user mr-2" style="color: #da9f5b;"></i>Customer
+                                    </label>
+                                    <select asp-for="CustomerId" class="form-control form-control-lg" asp-items="ViewBag.CustomerId">
+                                        <option value="">-- Select Customer --</option>
+                                    </select>
+                                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="AccountId" class="font-weight-bold">
+                                        <i class="fas fa-user-tie mr-2" style="color: #da9f5b;"></i>Staff Account
+                                    </label>
+                                    <select asp-for="AccountId" class="form-control form-control-lg" asp-items="ViewBag.AccountId">
+                                        <option value="">-- Select Staff --</option>
+                                    </select>
+                                    <span asp-validation-for="AccountId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="OrderDate" class="font-weight-bold">
+                                        <i class="fas fa-calendar mr-2" style="color: #da9f5b;"></i>Order Date
+                                    </label>
+                                    <input asp-for="OrderDate" type="datetime-local" class="form-control form-control-lg" />
+                                    <span asp-validation-for="OrderDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="TotalAmount" class="font-weight-bold">
+                                        <i class="fas fa-money-bill-wave mr-2" style="color: #da9f5b;"></i>Total Amount (VND)
+                                    </label>
+                                    <input asp-for="TotalAmount" class="form-control form-control-lg" />
+                                    <span asp-validation-for="TotalAmount" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Status" class="font-weight-bold">
+                                        <i class="fas fa-info-circle mr-2" style="color: #da9f5b;"></i>Status
+                                    </label>
+                                    <select asp-for="Status" class="form-control form-control-lg">
+                                        <option value="">-- Select Status --</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Processing">Processing</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="Cancelled">Cancelled</option>
+                                    </select>
+                                    <span asp-validation-for="Status" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="form-group mb-0">
+                            <div class="d-flex justify-content-between">
+                                <a asp-action="Index" class="btn btn-secondary btn-lg px-5">
+                                    <i class="fas fa-times mr-2"></i>Cancel
+                                </a>
+                                <button type="submit" class="btn btn-lg px-5" style="background-color: #da9f5b; color: white; border: none;">
+                                    <i class="fas fa-save mr-2"></i>Save Changes
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    .form-control:focus {
+        border-color: #da9f5b;
+        box-shadow: 0 0 0 0.2rem rgba(218, 159, 91, 0.25);
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+    }
+</style>

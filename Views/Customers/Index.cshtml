@@ -1,0 +1,186 @@
+﻿@model IEnumerable<WebBanNuocMVC.Data.Customer>
+
+@{
+    ViewData["Title"] = "Customers Management";
+    Layout = "_AdminLayout";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 style="color: #3a2c1f; font-weight: bold; margin: 0;">
+        <i class="fas fa-users mr-2" style="color: #da9f5b;"></i>
+        Customers Management
+    </h2>
+    <a asp-action="Create" class="btn btn-create">
+        <i class="fas fa-plus-circle mr-2"></i>Create New Customer
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0 modern-table">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th style="width: 200px; text-align: center;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            <strong style="color: #3a2c1f;">
+                                <i class="fas fa-user mr-2" style="color: #da9f5b;"></i>
+                                @item.CustomerName
+                            </strong>
+                        </td>
+                        <td>
+                            <i class="fas fa-phone mr-1 text-muted"></i>
+                            @item.Phone
+                        </td>
+                        <td>
+                            <i class="fas fa-envelope mr-1 text-muted"></i>
+                            @item.Email
+                        </td>
+                        <td>
+                            <span class="text-muted">
+                                @if (!string.IsNullOrEmpty(item.Address))
+                                {
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    @(item.Address.Length > 40 ? item.Address.Substring(0, 40) + "..." : item.Address)
+                                }
+                                else
+                                {
+                                    <span class="text-muted">-</span>
+                                }
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <div class="btn-group-modern">
+                                <a asp-action="Details" asp-route-id="@item.CustomerId" class="btn-action btn-action-info" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.CustomerId" class="btn-action btn-action-warning" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.CustomerId" class="btn-action btn-action-danger" title="Delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Modern Button Styles */
+    .btn-create {
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(218, 159, 91, 0.3);
+    }
+    
+    .btn-create:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(218, 159, 91, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    
+    /* Modern Table Styles */
+    .modern-table {
+        font-size: 0.95rem;
+    }
+    
+    .modern-table thead th {
+        background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%);
+        color: #da9f5b;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        padding: 16px;
+        border: none;
+    }
+    
+    .modern-table tbody td {
+        padding: 16px;
+        vertical-align: middle;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .modern-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+    
+    /* Modern Action Buttons */
+    .btn-group-modern {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .btn-action {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border: none;
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+    
+    .btn-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        color: white;
+        text-decoration: none;
+    }
+    
+    .btn-action-info {
+        background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    }
+    
+    .btn-action-info:hover {
+        box-shadow: 0 4px 8px rgba(23, 162, 184, 0.4);
+    }
+    
+    .btn-action-warning {
+        background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    }
+    
+    .btn-action-warning:hover {
+        box-shadow: 0 4px 8px rgba(255, 193, 7, 0.4);
+    }
+    
+    .btn-action-danger {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    }
+    
+    .btn-action-danger:hover {
+        box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+    }
+    
+    /* Card Styles */
+    .card {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+</style>
