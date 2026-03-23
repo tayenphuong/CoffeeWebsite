@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Downloads\\CoffeeWebsite-main-final-fixed\\CoffeeWebsite-main-ui-fixed (1)\\CoffeeWebsite-main\\WebBanNuocMVC.csproj": {}
+    "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\WebBanNuocMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Downloads\\CoffeeWebsite-main-final-fixed\\CoffeeWebsite-main-ui-fixed (1)\\CoffeeWebsite-main\\WebBanNuocMVC.csproj": {
+    "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\WebBanNuocMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\CoffeeWebsite-main-final-fixed\\CoffeeWebsite-main-ui-fixed (1)\\CoffeeWebsite-main\\WebBanNuocMVC.csproj",
+        "projectUniqueName": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\WebBanNuocMVC.csproj",
         "projectName": "WebBanNuocMVC",
-        "projectPath": "C:\\Users\\Admin\\Downloads\\CoffeeWebsite-main-final-fixed\\CoffeeWebsite-main-ui-fixed (1)\\CoffeeWebsite-main\\WebBanNuocMVC.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Downloads\\CoffeeWebsite-main-final-fixed\\CoffeeWebsite-main-ui-fixed (1)\\CoffeeWebsite-main\\obj\\",
+        "projectPath": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\WebBanNuocMVC.csproj",
+        "packagesPath": "C:\\Users\\PHUONG\\.nuget\\packages\\",
+        "outputPath": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\PHUONG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,8 +40,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -93,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

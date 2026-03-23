@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebBanNuocMVC.Data;
+using WebBanNuocMVC.DesignPatterns.Command;
 using WebBanNuocMVC.DesignPatterns.Observer;
 using WebBanNuocMVC.DesignPatterns.State;
 
@@ -15,11 +16,18 @@ namespace WebBanNuocMVC.Controllers
     {
         private readonly IOrderSubject _orderSubject;
         private readonly CoffeeShopDbContext _context;
+        private readonly OrderCommandInvoker _invoker; // Dùng biến private readonly
+        private readonly IServiceScopeFactory _scopeFactory; // Thêm cái này để xử lý Singleton
 
-        public OrdersController(CoffeeShopDbContext context, IOrderSubject orderSubject)
+        public OrdersController(CoffeeShopDbContext context,
+                             IOrderSubject orderSubject,
+                             OrderCommandInvoker invoker, // Lấy từ DI
+                             IServiceScopeFactory scopeFactory) // Lấy từ DI
         {
             _context = context;
             _orderSubject = orderSubject;
+            _invoker = invoker; // Gán từ DI, không dùng 'new'
+            _scopeFactory = scopeFactory;
         }
 
         public async Task<IActionResult> Index(string status = "all")
@@ -67,7 +75,7 @@ namespace WebBanNuocMVC.Controllers
                 .ToListAsync();
 
             ViewBag.CurrentStatus = status;
-
+            ViewBag.CanUndo = _invoker.CanUndo;
             return View(orders);
         }
 
@@ -241,8 +249,12 @@ namespace WebBanNuocMVC.Controllers
         {
             try
             {
-                var success = await ChangeOrderState(id, OrderAction.StartPreparing);
-                if (!success) return NotFound();
+                // Đóng gói logic vào Command
+                // Ví dụ cho MarkPreparing
+                var command = new OrderStatusCommand(_scopeFactory, ChangeOrderState, id, OrderAction.StartPreparing);
+
+                // Gửi lệnh đi thực thi thông qua Invoker
+                await _invoker.ExecuteCommandAsync(command);
 
                 TempData["Success"] = "Đơn hàng đã chuyển sang trạng thái Preparing.";
             }
@@ -250,7 +262,6 @@ namespace WebBanNuocMVC.Controllers
             {
                 TempData["Error"] = ex.Message;
             }
-
             return RedirectToAction(nameof(Index));
         }
 
@@ -260,14 +271,16 @@ namespace WebBanNuocMVC.Controllers
         {
             try
             {
-                var success = await ChangeOrderState(id, OrderAction.Complete);
-                if (!success) return NotFound();
+                // Truyền _scopeFactory thay vì _context
+                var command = new OrderStatusCommand(_scopeFactory, ChangeOrderState, id, OrderAction.Complete);
 
-                TempData["Success"] = "Đơn hàng đã hoàn tất.";
+                await _invoker.ExecuteCommandAsync(command);
+
+                TempData["Success"] = "Đơn hàng đã hoàn tất thành công.";
             }
             catch (Exception ex)
             {
-                TempData["Error"] = ex.Message;
+                TempData["Error"] = "Lỗi: " + ex.Message;
             }
 
             return RedirectToAction(nameof(Index));
@@ -279,16 +292,39 @@ namespace WebBanNuocMVC.Controllers
         {
             try
             {
-                var success = await ChangeOrderState(id, OrderAction.Cancel);
-                if (!success) return NotFound();
+                // 1. Khởi tạo Command cho hành động Hủy (Cancel)
+                var command = new OrderStatusCommand(_scopeFactory, ChangeOrderState, id, OrderAction.Cancel);
 
-                TempData["Success"] = "Đơn hàng đã bị hủy.";
+                // 2. Gửi lệnh cho Invoker thực thi
+                await _invoker.ExecuteCommandAsync(command);
+
+                TempData["Success"] = "Đơn hàng đã được hủy.";
             }
             catch (Exception ex)
             {
-                TempData["Error"] = ex.Message;
+                // Nếu State Pattern báo lỗi (vd: Đơn đã giao không được hủy), lỗi sẽ bắn về đây
+                TempData["Error"] = "Lỗi khi hủy đơn: " + ex.Message;
             }
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Undo()
+        {
+            try
+            {
+                string desc = await _invoker.UndoLastCommandAsync();
+                if (desc != null)
+                    TempData["Success"] = $"Đã hoàn tác: {desc}";
+                else
+                    TempData["Error"] = "Không còn lệnh nào để hoàn tác.";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Lỗi khi hoàn tác: " + ex.Message;
+            }
             return RedirectToAction(nameof(Index));
         }
     }

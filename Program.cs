@@ -7,6 +7,8 @@ using WebBanNuocMVC.DesignPatterns.Builder;
 using WebBanNuocMVC.DesignPatterns.Facade;
 using WebBanNuocMVC.DesignPatterns.FactoryMethod;
 using WebBanNuocMVC.DesignPatterns.FactoryMethod.ConcreteFactories;
+using WebBanNuocMVC.DesignPatterns.Command;
+using WebBanNuocMVC.DesignPatterns.Adapter;
 
 namespace WebBanNuocMVC
 {
@@ -67,6 +69,19 @@ namespace WebBanNuocMVC
             builder.Services.AddScoped<IOrderObserver, OrderLoggerObserver>();
             builder.Services.AddScoped<IOrderObserver, OrderAdminNotificationObserver>();
             builder.Services.AddScoped<IOrderSubject, OrderSubject>();
+
+            // Command
+            // ??i t? Scoped sang Singleton
+            builder.Services.AddSingleton<OrderCommandInvoker>();
+
+            // Adapter
+            // ??ng ký c? hai Adapter cho cùng m?t Interface
+            builder.Services.AddScoped<INotificationAdapter, EmailNotificationAdapter>();
+            builder.Services.AddScoped<INotificationAdapter, TelegramNotificationAdapter>();
+
+            // ??ng ký các thành ph?n h? tr?
+            builder.Services.AddHttpClient(); // Cho Telegram
+            builder.Services.AddScoped<IOrderObserver, CustomerNotificationObserver>();
 
             var app = builder.Build();
 

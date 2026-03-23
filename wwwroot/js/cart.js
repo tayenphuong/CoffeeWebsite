@@ -17,48 +17,36 @@ function addToCart(drinkId, quantity = 1) {
         }
     });
 }
-function updateQuantity(drinkId, quantity) {
-    if (quantity < 1) {
-        if (!confirm('Remove this item from cart?')) {
-            return;
-        }
-    }
+function updateQuantity(drinkId, size, newQty) {
+    if (newQty < 1) return;
 
     $.ajax({
         url: '/Cart/UpdateCart',
         type: 'POST',
-        data: { drinkId: drinkId, quantity: quantity },
+        data: {
+            drinkId: drinkId,
+            size: size, // Đảm bảo có size gửi lên
+            quantity: newQty
+        },
         success: function (response) {
             if (response.success) {
-                if (quantity < 1) {
-                    location.reload();
-                } else {
-                    // 1. Cập nhật số lượng và subtotal của dòng đó
-                    $('#qty-' + drinkId).val(quantity);
-                    $('#subtotal-' + drinkId).text(formatCurrency(response.itemSubtotal));
+                // Cập nhật đúng ô input dựa trên ID kết hợp Size
+                $(`#qty-${drinkId}-${size}`).val(newQty);
 
-                    // 2. Cập nhật Subtotal tổng (Chưa giảm)
-                    $('#cart-subtotal').text(formatCurrency(response.newTotal));
+                // Cập nhật đúng ô Subtotal dựa trên ID kết hợp Size
+                $(`#subtotal-${drinkId}-${size}`).text(response.itemSubtotal.toLocaleString() + 'đ');
 
-                    // 3. CẬP NHẬT GIẢM GIÁ (Strategy)
-                    if (response.discountAmount > 0) {
-                        $('#discount-row').show();
-                        $('#cart-discount').text('-' + formatCurrency(response.discountAmount));
-                    } else {
-                        $('#discount-row').hide();
-                    }
+                // Cập nhật tổng quát giỏ hàng
+                $('#cart-subtotal').text(response.newTotal.toLocaleString() + 'đ');
+                $('#cart-discount').text('-' + response.discountAmount.toLocaleString() + 'đ');
 
-                    // 4. Cập nhật Tổng cuối (FinalTotal + Shipping)
-                    var shipping = 20000;
-                    var finalWithShipping = response.finalTotal + shipping;
-                    $('#cart-total').text(formatCurrency(finalWithShipping));
+                // Tính lại Total cuối cùng (bao gồm phí ship 20k)
+                var finalWithShip = response.finalTotal + 20000;
+                $('#cart-total').text(finalWithShip.toLocaleString() + 'đ');
 
-                    updateCartBadge(response.cartCount);
-                }
+                // Cập nhật badge giỏ hàng trên Header (nếu có)
+                $('.cart-count').text(response.cartCount + ' items');
             }
-        },
-        error: function () {
-            alert('Error updating cart');
         }
     });
 }

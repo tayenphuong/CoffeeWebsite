@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebBanNuocMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b101068dc2f45a06e99d744d86349694fd20c64")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebBanNuocMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebBanNuocMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

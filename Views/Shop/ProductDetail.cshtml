@@ -66,7 +66,20 @@
                             <div class="fact-value">Ready to order</div>
                         </div>
                     </div>
-
+                    <div class="size-selection-section mb-4">
+                        <h5 class="section-label"><i class="fas fa-expand-arrows-alt mr-2"></i>Chọn kích cỡ</h5>
+                        <div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+                            <label class="btn btn-outline-primary active flex-fill mr-2" style="border-radius: 10px; border-color: #da9f5b; color: #fff;">
+                                <input type="radio" name="sizeOption" value="S" checked onchange="updatePriceDisplay('S', @Model.Price)"> Size S
+                            </label>
+                            <label class="btn btn-outline-primary flex-fill mr-2" style="border-radius: 10px; border-color: #da9f5b; color: #fff;">
+                                <input type="radio" name="sizeOption" value="M" onchange="updatePriceDisplay('M', @Model.Price)"> Size M (+5k)
+                            </label>
+                            <label class="btn btn-outline-primary flex-fill" style="border-radius: 10px; border-color: #da9f5b; color: #fff;">
+                                <input type="radio" name="sizeOption" value="L" onchange="updatePriceDisplay('L', @Model.Price)"> Size L (+10k)
+                            </label>
+                        </div>
+                    </div>
                     <div class="quantity-section">
                         <h5 class="section-label"><i class="fas fa-sort-numeric-up mr-2"></i>Quantity</h5>
                         <div class="quantity-controls">
@@ -77,7 +90,7 @@
                     </div>
 
                     <div class="action-buttons">
-                        <button class="btn-action btn-add-cart" onclick="addToCart(@Model.DrinkId)">
+                        <button class="btn-action btn-add-cart" onclick="addToCart(@Model.DrinkId); return false;">
                             <i class="fa fa-shopping-cart mr-2"></i>Add to Cart
                         </button>
                         <button class="btn-action btn-buy-now" onclick="buyNow(@Model.DrinkId)">
@@ -125,6 +138,16 @@
 
 @section Scripts {
     <script>
+        // Hàm cập nhật giá hiển thị khi đổi Size (Tăng tính trải nghiệm)
+        function updatePriceDisplay(size, basePrice) {
+            let additional = 0;
+            if (size === 'M') additional = 5000;
+            if (size === 'L') additional = 10000;
+
+            const finalPrice = basePrice + additional;
+            document.querySelector('.product-price').innerText = finalPrice.toLocaleString() + 'đ';
+        }
+
         function increaseQuantity() {
             var qty = document.getElementById('quantity');
             var currentValue = parseInt(qty.value);
@@ -137,17 +160,42 @@
             if (currentValue > 1) qty.value = currentValue - 1;
         }
 
+        // HÀM CHÍNH: Sửa lại để gửi kèm Size
         function addToCart(drinkId) {
             var quantity = parseInt(document.getElementById('quantity').value);
-            window.addToCart(drinkId, quantity);
+            var size = document.querySelector('input[name="sizeOption"]:checked').value;
+
+            $.ajax({
+                url: '/Cart/AddToCart',
+                type: 'POST',
+                data: {
+                    drinkId: drinkId,
+                    quantity: quantity,
+                    size: size
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                        // Cập nhật số lượng icon giỏ hàng nếu bạn có class .cart-badge
+                        if (response.cartCount) $(".cart-badge").text(response.cartCount);
+                    } else {
+                        alert("Lỗi: " + response.message);
+                    }
+                },
+                error: function () {
+                    alert("Không thể kết nối đến máy chủ.");
+                }
+            });
         }
 
         function buyNow(drinkId) {
             var quantity = parseInt(document.getElementById('quantity').value);
+            var size = document.querySelector('input[name="sizeOption"]:checked').value;
+
             $.ajax({
                 url: '/Cart/AddToCart',
                 type: 'POST',
-                data: { drinkId: drinkId, quantity: quantity },
+                data: { drinkId: drinkId, quantity: quantity, size: size },
                 success: function (response) {
                     if (response.success) window.location.href = '/Cart';
                 }
@@ -155,7 +203,6 @@
         }
     </script>
 }
-
 <style>
     .product-detail-info,
     .main-image-wrapper,
@@ -233,4 +280,22 @@
         .product-facts-grid { grid-template-columns: 1fr; }
         .product-detail-title { font-size: 34px; }
     }
+
+    .size-selection-section .btn-outline-primary:not(:disabled):not(.disabled).active,
+    .size-selection-section .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #da9f5b;
+        border-color: #da9f5b;
+        color: #2c1f14 !important;
+        font-weight: 700;
+    }
+
+    .size-selection-section .btn-outline-primary {
+        transition: all 0.2s;
+        background: rgba(255,255,255,0.05);
+    }
+
+        .size-selection-section .btn-outline-primary:hover {
+            background-color: rgba(218, 159, 91, 0.2);
+            color: #fff;
+        }
 </style>
