@@ -1,0 +1,303 @@
+@model IEnumerable<WebBanNuocMVC.Data.Drink>
+@using WebBanNuocMVC.Data
+@{
+    ViewData["Title"] = "Shop";
+    Layout = "_CustomerLayout";
+    var categories = ViewBag.Categories as List<Category> ?? new List<Category>();
+    var totalItems = ViewBag.TotalItems != null ? (int)ViewBag.TotalItems : 0;
+    var currentPage = ViewBag.CurrentPage != null ? (int)ViewBag.CurrentPage : 1;
+    var totalPages = ViewBag.TotalPages != null ? (int)ViewBag.TotalPages : 1;
+    var currentCategory = ViewBag.CurrentCategory as int?;
+    var searchTerm = ViewBag.SearchTerm as string;
+}
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Our Shop</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Shop</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pb-4">
+    <div class="container">
+        <div class="shop-summary-panel">
+            <div class="summary-item">
+                <div class="summary-label">Visible products</div>
+                <div class="summary-value">@totalItems</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">Categories</div>
+                <div class="summary-value">@categories.Count</div>
+            </div>
+            <div class="summary-item summary-item-wide">
+                <div class="summary-label">Current filter</div>
+                <div class="summary-value summary-text-value">
+                    @(string.IsNullOrWhiteSpace(searchTerm) ? "No search keyword" : $"Search: {searchTerm}")
+                    @if (currentCategory.HasValue)
+                    {
+                        var categoryName = categories.FirstOrDefault(c => c.CategoryId == currentCategory.Value)?.CategoryName ?? "Selected category";
+                        <span class="filter-chip ml-2">@categoryName</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <div class="shop-side-card mb-4">
+                    <h4 class="text-white mb-4">Categories</h4>
+                    <div class="list-group category-list-group">
+                        <a asp-action="Index" class="list-group-item list-group-item-action @(currentCategory == null ? "active" : "")">
+                            All Products <span class="category-count-chip">@totalItems</span>
+                        </a>
+                        @foreach (var category in categories)
+                        {
+                            <a asp-action="Index" asp-route-categoryId="@category.CategoryId"
+                               class="list-group-item list-group-item-action @(currentCategory == category.CategoryId ? "active" : "")">
+                                @category.CategoryName
+                            </a>
+                        }
+                    </div>
+                </div>
+
+                <div class="shop-side-card">
+                    <h4 class="text-white mb-4">Search</h4>
+                    <form asp-action="Index" method="get">
+                        @if (currentCategory.HasValue)
+                        {
+                            <input type="hidden" name="categoryId" value="@currentCategory" />
+                        }
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control shop-search-input"
+                                   placeholder="Search products or descriptions" value="@searchTerm">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                @if (!string.IsNullOrWhiteSpace(searchTerm))
+                {
+                    <div class="alert alert-info d-flex justify-content-between align-items-center flex-wrap">
+                        <span>Search results for <strong>@searchTerm</strong></span>
+                        <a asp-action="Index" class="btn btn-sm btn-secondary mt-2 mt-sm-0">Clear</a>
+                    </div>
+                }
+
+                @if (Model != null && Model.Any())
+                {
+                    <div class="row">
+                        @foreach (var drink in Model)
+                        {
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-image-wrapper">
+                                        <img class="product-image"
+                                             src="@Url.Content(string.IsNullOrEmpty(drink.Image) ? "~/img/menu-1.jpg" : drink.Image)"
+                                             alt="@drink.DrinkName">
+                                        <div class="product-overlay">
+                                            <button class="btn-modern btn-modern-cart" onclick="addToCart(@drink.DrinkId); return false;">
+                                                <i class="fa fa-shopping-cart mr-2"></i>Add to Cart
+                                            </button>
+                                            <a asp-action="ProductDetail" asp-route-id="@drink.DrinkId" class="btn-modern btn-modern-view">
+                                                <i class="fa fa-eye mr-2"></i>View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-meta-row">
+                                            <span class="product-category">@(drink.Category?.CategoryName ?? "Other")</span>
+                                            <span class="product-id">#@drink.DrinkId</span>
+                                        </div>
+                                        <a asp-action="ProductDetail" asp-route-id="@drink.DrinkId" class="product-title">
+                                            @drink.DrinkName
+                                        </a>
+                                        <p class="product-description">@(drink.Description?.Length > 85 ? drink.Description.Substring(0, 85) + "..." : drink.Description ?? "Delicious drink")</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">@((drink.Price ?? 0).ToString("N0"))đ</span>
+                                            <button class="btn-quick-add" onclick="addToCart(@drink.DrinkId); return false;" title="Quick add">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    @if (totalPages > 1)
+                    {
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <nav>
+                                    <ul class="pagination justify-content-center">
+                                        @for (int i = 1; i <= totalPages; i++)
+                                        {
+                                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                                <a class="page-link"
+                                                   asp-action="Index"
+                                                   asp-route-page="@i"
+                                                   asp-route-categoryId="@currentCategory"
+                                                   asp-route-search="@searchTerm">
+                                                    @i
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="empty-state-panel text-center">
+                        <i class="fa fa-search mb-3"></i>
+                        <h4>No products found</h4>
+                        <p>Try another keyword or remove the current filter.</p>
+                        <a asp-action="Index" class="btn btn-primary">View all products</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .shop-summary-panel,
+    .shop-side-card,
+    .product-card,
+    .empty-state-panel {
+        background: #2c1f14;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .shop-summary-panel {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .summary-item {
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .summary-item-wide { grid-column: span 1; }
+    .summary-label { color: rgba(255,255,255,0.65); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .summary-value { color: #fff; font-size: 30px; font-weight: 700; }
+    .summary-text-value { font-size: 16px; line-height: 1.6; }
+    .filter-chip {
+        display: inline-block;
+        background: rgba(218, 159, 91, 0.15);
+        color: #da9f5b;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .shop-side-card { padding: 24px; }
+    .category-list-group .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        border-color: rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.82);
+    }
+    .category-list-group .list-group-item.active {
+        background: #da9f5b;
+        border-color: #da9f5b;
+        color: #fff;
+    }
+    .category-count-chip {
+        display: inline-block;
+        min-width: 28px;
+        text-align: center;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.12);
+        color: inherit;
+        font-size: 12px;
+    }
+
+    .shop-search-input {
+        background: rgba(0,0,0,0.18);
+        border: 1px solid rgba(255,255,255,0.08);
+        color: #fff;
+    }
+
+    .product-card {
+        overflow: hidden;
+        transition: all 0.35s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 30px rgba(218, 159, 91, 0.18);
+    }
+
+    .product-image-wrapper { position: relative; overflow: hidden; height: 260px; }
+    .product-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .product-card:hover .product-image { transform: scale(1.08); }
+    .product-overlay {
+        position: absolute; inset: 0; background: rgba(44, 31, 20, 0.95);
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+        opacity: 0; transition: opacity 0.3s ease;
+    }
+    .product-card:hover .product-overlay { opacity: 1; }
+
+    .btn-modern {
+        padding: 11px 24px; border-radius: 999px; font-weight: 600; font-size: 14px; border: none;
+        transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-width: 168px;
+    }
+    .btn-modern-cart { background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: #fff; }
+    .btn-modern-view { background: transparent; color: #fff; border: 2px solid #da9f5b; }
+    .btn-modern-view:hover, .btn-modern-cart:hover { color: #fff; text-decoration: none; transform: translateY(-2px); }
+
+    .product-info { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .product-meta-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .product-category {
+        display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;
+        color: #da9f5b; background: rgba(218, 159, 91, 0.16); text-transform: uppercase; letter-spacing: 0.7px;
+    }
+    .product-id { color: rgba(255,255,255,0.45); font-size: 12px; }
+    .product-title { color: #fff; font-size: 22px; font-weight: 700; margin-bottom: 10px; text-decoration: none; }
+    .product-title:hover { color: #da9f5b; text-decoration: none; }
+    .product-description { color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 18px; }
+    .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+    .product-price { color: #da9f5b; font-size: 26px; font-weight: 700; }
+    .btn-quick-add {
+        width: 44px; height: 44px; border-radius: 50%; border: none;
+        background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%); color: #fff; font-size: 16px;
+    }
+
+    .empty-state-panel { padding: 48px 24px; color: #fff; }
+    .empty-state-panel i { font-size: 42px; color: #da9f5b; }
+
+    @@media (max-width: 991.98px) {
+        .shop-summary-panel { grid-template-columns: 1fr; }
+    }
+</style>
+

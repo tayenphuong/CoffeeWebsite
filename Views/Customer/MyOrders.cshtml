@@ -1,0 +1,159 @@
+@model IEnumerable<WebBanNuocMVC.Data.Order>
+@{
+    ViewData["Title"] = "KOFFEE - My Orders";
+    Layout = "_CustomerLayout";
+    var orders = Model?.ToList() ?? new List<WebBanNuocMVC.Data.Order>();
+    var completedCount = orders.Count(o => o.Status == "Completed" || o.Status == "Paid");
+    var pendingCount = orders.Count(o => o.Status == "Pending" || o.Status == "Preparing");
+    var totalSpent = orders.Sum(o => o.TotalAmount ?? 0);
+}
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">My Orders</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">My Orders</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pb-4">
+    <div class="container">
+        <div class="orders-insight-grid">
+            <div class="orders-insight-card">
+                <div class="orders-insight-label">Total orders</div>
+                <div class="orders-insight-value">@orders.Count</div>
+            </div>
+            <div class="orders-insight-card">
+                <div class="orders-insight-label">Completed / Paid</div>
+                <div class="orders-insight-value">@completedCount</div>
+            </div>
+            <div class="orders-insight-card">
+                <div class="orders-insight-label">Pending</div>
+                <div class="orders-insight-value">@pendingCount</div>
+            </div>
+            <div class="orders-insight-card">
+                <div class="orders-insight-label">Total spent</div>
+                <div class="orders-insight-value">@totalSpent.ToString("N0")đ</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-4">
+    <div class="container">
+        @if (orders.Any())
+        {
+            <div class="row">
+                @foreach (var order in orders)
+                {
+                    <div class="col-lg-12 mb-4">
+                        <div class="order-card">
+                            <div class="row align-items-center">
+                                <div class="col-lg-2 col-md-4 mb-3 mb-lg-0">
+                                    <div class="order-id">Order #@order.OrderId</div>
+                                    <div class="order-date">@(order.OrderDate?.ToString("dd/MM/yyyy HH:mm") ?? "N/A")</div>
+                                </div>
+                                <div class="col-lg-4 col-md-8 mb-3 mb-lg-0">
+                                    <div class="order-label">Items</div>
+                                    <div class="order-main-text">@order.OrderDetails.Count product(s)</div>
+                                    <div class="order-subtext">
+                                        @string.Join(", ", order.OrderDetails.Take(2).Select(od => od.Drink?.DrinkName))
+                                        @(order.OrderDetails.Count > 2 ? "..." : "")
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 mb-3 mb-lg-0">
+                                    <div class="order-label">Total</div>
+                                    <div class="order-price">@((order.TotalAmount ?? 0).ToString("N0"))đ</div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 mb-3 mb-lg-0">
+                                    <span class="order-status-chip @(order.Status == "Completed" || order.Status == "Paid" ? "status-success" : order.Status == "Pending" ? "status-warning" : "status-info")">
+                                        @order.Status
+                                    </span>
+                                </div>
+                                <div class="col-lg-2 col-md-4 text-lg-right">
+                                    <a asp-action="OrderDetail" asp-route-id="@order.OrderId" class="btn btn-primary px-4">
+                                        <i class="fa fa-eye mr-2"></i>Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-orders-state text-center">
+                <i class="fas fa-shopping-bag fa-4x text-primary mb-4"></i>
+                <h3 class="text-white mb-3">No Orders Yet</h3>
+                <p class="text-white-50 mb-4">You haven't placed any orders yet. Start shopping now.</p>
+                <a asp-controller="Shop" asp-action="Index" class="btn btn-primary btn-lg">
+                    <i class="fa fa-shopping-bag mr-2"></i>Start Shopping
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .orders-insight-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .orders-insight-card,
+    .order-card,
+    .empty-orders-state {
+        background: #2c1f14;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .orders-insight-card {
+        padding: 22px;
+        color: #fff;
+    }
+
+    .orders-insight-label,
+    .order-label,
+    .order-date,
+    .order-subtext {
+        color: rgba(255,255,255,0.65);
+    }
+
+    .orders-insight-value {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .order-card {
+        padding: 24px 26px;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .order-id { color: #da9f5b; font-size: 20px; font-weight: 700; }
+    .order-main-text { font-size: 18px; font-weight: 700; color: #fff; }
+    .order-price { color: #da9f5b; font-size: 24px; font-weight: 700; }
+    .order-status-chip {
+        display: inline-flex; align-items: center; justify-content: center; min-width: 120px; padding: 9px 16px; border-radius: 999px;
+        font-weight: 700;
+    }
+    .status-success { background: rgba(40, 167, 69, 0.18); color: #7ce49b; }
+    .status-warning { background: rgba(255, 193, 7, 0.18); color: #ffd86b; }
+    .status-info { background: rgba(23, 162, 184, 0.18); color: #78d5e2; }
+    .empty-orders-state { padding: 48px 24px; }
+
+    @@media (max-width: 991.98px) {
+        .orders-insight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @@media (max-width: 575.98px) {
+        .orders-insight-grid { grid-template-columns: 1fr; }
+    }
+</style>

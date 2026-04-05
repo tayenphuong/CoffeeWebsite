@@ -1,0 +1,53 @@
+﻿@model WebBanNuocMVC.Data.Category
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 style="color: #3a2c1f; font-weight: bold;">
+                    <i class="fas fa-info-circle mr-2" style="color: #da9f5b;"></i>
+                    Category Details
+                </h2>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.CategoryId" class="btn btn-warning mr-2">
+                        <i class="fas fa-edit mr-2"></i>Edit
+                    </a>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
+                        <i class="fas fa-list mr-2"></i>Category Information
+                    </h5>
+                </div>
+                <div class="card-body p-5 text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-tag" style="font-size: 64px; color: #da9f5b;"></i>
+                    </div>
+                    <h3 class="mb-3" style="color: #3a2c1f; font-weight: bold;">@Model.CategoryName</h3>
+                    <p class="text-muted">Category ID: #@Model.CategoryId</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+    }
+</style>

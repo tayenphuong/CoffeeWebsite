@@ -1,0 +1,126 @@
+@{
+    ViewData["Title"] = "KOFFEE - About Us";
+    Layout = "_CustomerLayout";
+}
+
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">About Us</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">About</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h4>
+            <h1 class="display-4">Serving Since 2024</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 py-0 py-lg-5">
+                <h1 class="mb-3">Our Story</h1>
+                <h5 class="mb-3">Welcome to KOFFEE - Where Every Cup Tells a Story</h5>
+                <p>At KOFFEE, we believe that coffee is more than just a beverage—it's an experience, a moment of comfort, and a connection between people. Founded in 2024, our mission has been to bring the finest coffee experience to our community.</p>
+                <a asp-controller="Shop" asp-action="Index" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Explore Menu</a>
+            </div>
+            <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="~/img/about.png" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-4 py-0 py-lg-5">
+                <h1 class="mb-3">Our Vision</h1>
+                <p>We source the finest beans from around the world and roast them to perfection, ensuring every cup delivers exceptional taste and aroma. Our skilled baristas are passionate about their craft and dedicated to creating the perfect coffee experience for you.</p>
+                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Premium Quality Beans</h5>
+                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Expert Baristas</h5>
+                <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Cozy Atmosphere</h5>
+                <a asp-controller="Home" asp-action="Contact" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Team</h4>
+            <h1 class="display-4">Meet Our Baristas</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="~/img/team-1.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0 text-center">John Doe</h4>
+                    <div class="text-center text-muted mb-3">
+                        <small>Head Barista</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="~/img/team-2.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0 text-center">Jane Smith</h4>
+                    <div class="text-center text-muted mb-3">
+                        <small>Senior Barista</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="~/img/team-3.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0 text-center">Mike Johnson</h4>
+                    <div class="text-center text-muted mb-3">
+                        <small>Barista</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="~/img/team-4.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0 text-center">Sarah Williams</h4>
+                    <div class="text-center text-muted mb-3">
+                        <small>Barista</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

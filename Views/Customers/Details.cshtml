@@ -1,0 +1,30 @@
+﻿@model WebBanNuocMVC.Data.Customer
+@{ ViewData["Title"] = "Customer Details"; }
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2 style="color: #3a2c1f; font-weight: bold;"><i class="fas fa-info-circle mr-2" style="color: #da9f5b;"></i>Customer Details</h2>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.CustomerId" class="btn btn-warning mr-2"><i class="fas fa-edit mr-2"></i>Edit</a>
+                <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left mr-2"></i>Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;"><i class="fas fa-user mr-2"></i>Customer Information</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="detail-row"><div class="detail-label"><i class="fas fa-id-card mr-2" style="color: #da9f5b;"></i>Name</div><div class="detail-value">@Model.CustomerName</div></div>
+                    <div class="detail-row"><div class="detail-label"><i class="fas fa-phone mr-2" style="color: #da9f5b;"></i>Phone</div><div class="detail-value">@Model.Phone</div></div>
+                    <div class="detail-row"><div class="detail-label"><i class="fas fa-envelope mr-2" style="color: #da9f5b;"></i>Email</div><div class="detail-value">@Model.Email</div></div>
+                    <div class="detail-row"><div class="detail-label"><i class="fas fa-map-marker-alt mr-2" style="color: #da9f5b;"></i>Address</div><div class="detail-value">@Model.Address</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>.detail-row{padding:16px 0;border-bottom:1px solid #dee2e6;}.detail-row:last-child{border-bottom:none;}.detail-label{font-weight:600;color:#495057;margin-bottom:8px;font-size:14px;text-transform:uppercase;}.detail-value{font-size:16px;color:#212529;}.btn:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,0.2);transition:all 0.3s;}</style>

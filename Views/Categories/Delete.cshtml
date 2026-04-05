@@ -1,0 +1,69 @@
+﻿@model WebBanNuocMVC.Data.Category
+
+@{
+    ViewData["Title"] = "Delete Category";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 style="color: #dc3545; font-weight: bold;">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    Delete Category
+                </h2>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">
+                    <i class="fas fa-exclamation-circle mr-2"></i>Are you sure?
+                </h4>
+                <p class="mb-0">Deleting this category may affect all products associated with it. This action cannot be undone.</p>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); border: none;">
+                    <h5 class="m-0 font-weight-bold text-white">
+                        <i class="fas fa-list mr-2"></i>Category Information
+                    </h5>
+                </div>
+                <div class="card-body p-5 text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-tag" style="font-size: 64px; color: #dc3545;"></i>
+                    </div>
+                    <h3 class="mb-3" style="color: #3a2c1f; font-weight: bold;">@Model.CategoryName</h3>
+                    <p class="text-muted mb-4">Category ID: #@Model.CategoryId</p>
+
+                    <hr class="my-4">
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="CategoryId" />
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg px-5">
+                                <i class="fas fa-times mr-2"></i>Cancel
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg px-5" onclick="return confirm('Delete this category permanently?');">
+                                <i class="fas fa-trash-alt mr-2"></i>Delete
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+    }
+</style>

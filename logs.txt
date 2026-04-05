@@ -1,0 +1,89 @@
+3/9/2026 10:19:49 AM :  2 || customer : login
+3/9/2026 10:35:20 AM : LOGIN | ID:1 | USER:admin | ROLE:Admin
+3/9/2026 11:09:14 AM : LOGIN | ID:2 | USER:customer | ROLE:Customer
+3/13/2026 9:17:19 PM : LOGIN | ID:1 | USER:admin | ROLE:Admin
+3/14/2026 10:23:23 AM : LOGIN | ID:1 | USER:admin | ROLE:Admin
+3/14/2026 1:05:46 PM : LOGIN | ID:1 | USER:admin | ROLE:Admin
+[15/03/2026 20:56:16] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[15/03/2026 20:58:49] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[15/03/2026 21:20:47] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[15/03/2026 21:22:15] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[15/03/2026 21:25:48] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[16/03/2026 13:50:43] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 13:22:01] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 13:48:11] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 13:54:09] INFO: LOGIN | ID:2 | USER:customer | ROLE:Customer
+[17/03/2026 13:55:58] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 14:06:49] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 14:07:43] INFO: LOGIN | ID:2 | USER:customer | ROLE:Customer
+[17/03/2026 14:10:35] INFO: LOGIN | ID:2 | USER:customer | ROLE:Customer
+[17/03/2026 14:26:37] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 18:06:10] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 18:08:43] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 21:18:20] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 21:18:35] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[17/03/2026 21:21:22] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[22/03/2026 12:59:51] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[22/03/2026 13:12:21] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 13:12:21.
+[22/03/2026 13:12:21] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 13:14:57] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 13:14:57.
+[22/03/2026 13:14:57] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 13:16:35] INFO: Order #1 changed status from 'Pending' to 'Preparing' at 22/03/2026 13:16:35.
+[22/03/2026 13:16:35] INFO: [ADMIN NOTIFY] Order #1 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 13:33:10] INFO: Order #1 changed status from 'Preparing' to 'Completed' at 22/03/2026 13:33:10.
+[22/03/2026 13:33:10] INFO: [ADMIN NOTIFY] Order #1 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 13:33:31] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 13:33:31.
+[22/03/2026 13:33:31] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 13:36:53] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 13:36:53.
+[22/03/2026 13:36:53] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 13:37:04] INFO: Order #1 changed status from 'Pending' to 'Cancelled' at 22/03/2026 13:37:04.
+[22/03/2026 13:37:04] INFO: [ADMIN NOTIFY] Order #1 vừa chuyển từ 'Pending' sang 'Cancelled'.
+[22/03/2026 13:43:37] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 13:43:37.
+[22/03/2026 13:43:37] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 13:45:23] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 13:45:23.
+[22/03/2026 13:45:23] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 13:49:29] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 13:49:29.
+[22/03/2026 13:49:29] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 13:59:22] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 13:59:22.
+[22/03/2026 13:59:22] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 14:08:16] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 14:08:16.
+[22/03/2026 14:08:16] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 14:08:20] INFO: Order #2 changed status from 'Pending' to 'Cancelled' at 22/03/2026 14:08:20.
+[22/03/2026 14:08:20] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Cancelled'.
+[22/03/2026 15:25:55] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 15:25:55.
+[22/03/2026 15:25:55] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 15:27:15] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:27:15.
+[22/03/2026 15:27:15] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 15:27:34] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 15:27:34.
+[22/03/2026 15:27:34] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 15:27:37] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:27:37.
+[22/03/2026 15:27:37] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 15:35:26] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 15:35:26.
+[22/03/2026 15:35:26] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 15:35:28] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:35:28.
+[22/03/2026 15:35:28] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 15:35:52] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:35:52.
+[22/03/2026 15:35:52] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 15:39:43] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 15:39:43.
+[22/03/2026 15:39:43] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 15:39:46] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:39:46.
+[22/03/2026 15:39:46] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 15:44:19] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 15:44:19.
+[22/03/2026 15:44:19] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 15:44:22] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 15:44:22.
+[22/03/2026 15:44:22] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[22/03/2026 16:03:48] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 22/03/2026 16:03:48.
+[22/03/2026 16:03:48] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[22/03/2026 16:03:50] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 16:03:50.
+[22/03/2026 16:03:50] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[04/04/2026 14:09:09] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[04/04/2026 16:13:55] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[04/04/2026 16:22:29] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[04/04/2026 16:24:06] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[04/04/2026 16:25:28] INFO: Order #2 changed status from 'Pending' to 'Preparing' at 04/04/2026 16:25:28.
+[04/04/2026 16:25:28] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
+[04/04/2026 16:25:33] INFO: Order #1 changed status from 'Pending' to 'Preparing' at 04/04/2026 16:25:33.
+[04/04/2026 16:25:33] INFO: [ADMIN NOTIFY] Order #1 vừa chuyển từ 'Pending' sang 'Preparing'.
+[04/04/2026 16:25:55] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 04/04/2026 16:25:55.
+[04/04/2026 16:25:55] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[04/04/2026 17:27:30] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin

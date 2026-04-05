@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "KOFFEE - Payment";
+    Layout = "_CustomerLayout";
+    var cart = (WebBanNuocMVC.Models.Cart.ShoppingCart)ViewBag.Cart;
+    var checkoutInfo = (WebBanNuocMVC.Models.ViewModels.CheckoutViewModel)ViewBag.CheckoutInfo;
+    var returnToAdmin = Context.Request.Query["returnToAdmin"].ToString() == "true" ? "true" : null;
+}
+
+
+<div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Payment</h1>
+        <div class="d-inline-flex mb-lg-5">
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Home" asp-action="Index" asp-route-returnToAdmin="@returnToAdmin">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Cart" asp-action="Index" asp-route-returnToAdmin="@returnToAdmin">Cart</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white"><a class="text-white" asp-controller="Checkout" asp-action="Index" asp-route-returnToAdmin="@returnToAdmin">Checkout</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Payment</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        @if (TempData["Info"] != null)
+        {
+            <div class="alert alert-info alert-dismissible fade show">
+                <strong>Info!</strong> @TempData["Info"]
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="bg-secondary rounded p-5">
+                    <h4 class="text-white mb-4">Select Payment Method</h4>
+
+                    <form asp-action="ProcessPayment" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="returnToAdmin" value="@returnToAdmin" />
+
+                        <div class="payment-option mb-4 p-4 bg-dark rounded selected-payment">
+                            <div class="d-flex align-items-start">
+                                <div class="mr-3 mt-1">
+                                    <i class="fas fa-money-bill-wave text-success" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-2">Tiền mặt</h5>
+                                    <p class="text-white-50 mb-2">Hiện tại website chỉ hỗ trợ thanh toán tiền mặt khi nhận đơn.</p>
+                                    <span class="badge badge-success px-3 py-2">Cash only</span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="paymentMethod" value="COD" />
+                        </div>
+
+                        <div class="alert alert-secondary" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); color: #fff;">
+                            <i class="fas fa-info-circle mr-2"></i>VNPay và PayPal đang được ẩn trên giao diện admin hiện tại.
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" asp-route-returnToAdmin="@returnToAdmin" class="btn btn-secondary py-3 px-5">
+                                <i class="fa fa-arrow-left mr-2"></i>Back
+                            </a>
+                            <button type="submit" class="btn btn-primary py-3 px-5">
+                                <i class="fa fa-check mr-2"></i>Place Order
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="bg-secondary rounded p-4 mb-4">
+                    <h4 class="text-white mb-4 border-bottom pb-3">
+                        <i class="fas fa-receipt mr-2 text-primary"></i>Order Summary
+                    </h4>
+
+                    <div class="summary-items mb-3">
+                        @foreach (var item in cart.Items)
+                        {
+                            <div class="d-flex justify-content-between text-white mb-2" style="font-size: 0.9rem;">
+                                <span class="text-white-50">@item.DrinkName <small>x@item.Quantity</small></span>
+                                <span>@item.Subtotal.ToString("N0")đ</span>
+                            </div>
+                        }
+                    </div>
+
+                    <hr class="border-secondary">
+
+                    <div class="summary-details">
+                        <div class="d-flex justify-content-between text-white mb-2">
+                            <span>Subtotal:</span>
+                            <span>@cart.TotalAmount.ToString("N0")đ</span>
+                        </div>
+
+                        @if (cart.DiscountAmount > 0)
+                        {
+                            <div class="d-flex justify-content-between text-success mb-2">
+                                <span>
+                                    <i class="fas fa-tag mr-1"></i> Discount
+                                    <small class="text-muted">(@cart.DiscountStrategy.GetDescription())</small>:
+                                </span>
+                                <span>-@cart.DiscountAmount.ToString("N0")đ</span>
+                            </div>
+                        }
+
+                        <div class="d-flex justify-content-between text-white mb-3">
+                            <span>Shipping Fee:</span>
+                            <span>20,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3 rounded" style="background: rgba(0,0,0,0.2); border: 1px dashed #da9f5b;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="text-white m-0">Grand Total:</h5>
+                            <h4 class="text-primary m-0" style="font-weight: 800;">
+                                @((cart.FinalAmount + 20000).ToString("N0"))đ
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="bg-secondary rounded p-4">
+                    <h5 class="text-white mb-3">Shipping To:</h5>
+                    <p class="text-white mb-2"><strong>@checkoutInfo.CustomerName</strong></p>
+                    <p class="text-white-50 mb-1"><i class="fa fa-phone mr-2"></i>@checkoutInfo.Phone</p>
+                    <p class="text-white-50 mb-1"><i class="fa fa-envelope mr-2"></i>@checkoutInfo.Email</p>
+                    <p class="text-white-50 mb-0"><i class="fa fa-map-marker-alt mr-2"></i>@checkoutInfo.Address</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .payment-option {
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .payment-option:hover {
+        background-color: #3d2b1f !important;
+        border-color: #da9f5b;
+    }
+
+    .selected-payment {
+        border-color: #da9f5b;
+        background-color: rgba(218, 159, 91, 0.1) !important;
+        box-shadow: 0 0 15px rgba(218, 159, 91, 0.2);
+    }
+</style>
+
+
+

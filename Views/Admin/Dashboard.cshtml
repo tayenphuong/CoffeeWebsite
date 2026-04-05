@@ -1,0 +1,417 @@
+@using WebBanNuocMVC.Data
+@using WebBanNuocMVC.DesignPatterns.Proxy
+
+@{
+    ViewData["Title"] = "KOFFEE - Admin Dashboard";
+    Layout = "_AdminLayout";
+
+
+    var monthlyRevenue = ViewBag.MonthlyRevenue as List<MonthlyRevenueItem> ?? new List<MonthlyRevenueItem>();
+    var todayText = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+}
+
+<style>
+    .dashboard-page {
+        padding: 18px 8px 30px 8px;
+    }
+
+    .dashboard-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #2b1d12;
+    }
+
+        .dashboard-title i {
+            color: #d79a4d;
+        }
+
+    .dashboard-date {
+        font-size: 15px;
+        color: #7f8896;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+
+    .stat-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 16px 18px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 110px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .stat-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+        }
+
+    .stat-orange::before {
+        background: #d79a4d;
+    }
+
+    .stat-green::before {
+        background: #2eb85c;
+    }
+
+    .stat-blue::before {
+        background: #25a9e0;
+    }
+
+    .stat-yellow::before {
+        background: #f0b90b;
+    }
+
+    .stat-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #9aa3af;
+        font-weight: 700;
+        letter-spacing: .4px;
+        margin-bottom: 8px;
+    }
+
+    .stat-value {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1f2937;
+        line-height: 1.2;
+    }
+
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #f5f6f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b90a0;
+        font-size: 24px;
+        flex-shrink: 0;
+    }
+
+    .panel-box {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        overflow: hidden;
+        margin-bottom: 18px;
+    }
+
+    .panel-header {
+        background: linear-gradient(90deg, #3b2616 0%, #5a3b24 100%);
+        color: #d79a4d;
+        font-weight: 700;
+        padding: 11px 16px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .panel-body {
+        padding: 18px;
+    }
+
+    .quick-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .quick-card {
+        background: #fff;
+        border: 1px solid #eef0f3;
+        border-radius: 14px;
+        padding: 16px;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transition: .2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+
+        .quick-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+            text-decoration: none;
+        }
+
+    .quick-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        flex-shrink: 0;
+    }
+
+    .quick-orange {
+        background: #d79a4d;
+    }
+
+    .quick-green {
+        background: #2eb85c;
+    }
+
+    .quick-blue {
+        background: #25a9e0;
+    }
+
+    .quick-yellow {
+        background: #f0b90b;
+    }
+
+    .quick-title {
+        font-weight: 700;
+        color: #2a2f36;
+        margin-bottom: 3px;
+    }
+
+    .quick-text {
+        font-size: 13px;
+        color: #8a93a1;
+        margin: 0;
+    }
+
+    .revenue-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .revenue-table thead th {
+            background: linear-gradient(90deg, #3b2616 0%, #5a3b24 100%);
+            color: #f0b15a;
+            font-weight: 700;
+            padding: 12px 14px;
+            border: none;
+            text-align: left;
+        }
+
+        .revenue-table tbody td {
+            padding: 13px 14px;
+            border: 1px solid #edf0f3;
+            color: #374151;
+            background: #fff;
+        }
+
+        .revenue-table tbody tr:nth-child(even) td {
+            background: #fbfcfd;
+        }
+
+    .empty-box {
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #b0b7c3;
+        font-size: 42px;
+    }
+
+    @@media (max-width: 1200px) {
+        .stats-grid,
+        .quick-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .stats-grid,
+        .quick-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .dashboard-title {
+            font-size: 20px;
+        }
+    }
+</style>
+
+@if (ViewBag.HasAccess == false)
+{
+    <div class="alert alert-danger mt-3">
+        <strong>@ViewBag.RoleLabel</strong> - @ViewBag.AccessMessage
+    </div>
+}
+else
+{
+    <div class="dashboard-page">
+        <div class="dashboard-topbar">
+            <h2 class="dashboard-title">
+                <i class="fas fa-tachometer-alt"></i>
+                KOFFEE Admin Dashboard
+            </h2>
+
+            <div class="dashboard-date">
+                <i class="far fa-calendar-alt"></i>
+                @todayText
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-orange">
+                <div>
+                    <div class="stat-label">Total Products</div>
+                    <div class="stat-value">@ViewBag.TotalDrinks</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-green">
+                <div>
+                    <div class="stat-label">Total Revenue</div>
+                    <div class="stat-value">@String.Format("{0:N0}", ViewBag.RevenueThisMonth ?? 0)đ</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-blue">
+                <div>
+                    <div class="stat-label">Total Orders</div>
+                    <div class="stat-value">@ViewBag.TotalOrders</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-yellow">
+                <div>
+                    <div class="stat-label">Total Customers</div>
+                    <div class="stat-value">@ViewBag.TotalCustomers</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-box">
+            <div class="panel-header">
+                <i class="fas fa-bolt"></i>
+                Quick Actions
+            </div>
+            <div class="panel-body">
+                <div class="quick-grid">
+                    <a asp-controller="Drinks" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-orange">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">Manage Products</div>
+                            <p class="quick-text">Add, edit or remove products</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Categories" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-green">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">Manage Categories</div>
+                            <p class="quick-text">Organize product categories</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Orders" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-blue">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">View Orders</div>
+                            <p class="quick-text">Manage customer orders</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Customers" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-yellow">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">View Customers</div>
+                            <p class="quick-text">Customer information</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-box">
+            <div class="panel-header">
+                <i class="fas fa-chart-line"></i>
+                Recent Revenue
+            </div>
+            <div class="panel-body p-0">
+                <table class="revenue-table">
+                    <thead>
+                        <tr>
+                            <th style="width:50%;">Month</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (monthlyRevenue.Any())
+                        {
+                            @foreach (var item in monthlyRevenue)
+                            {
+                                <tr>
+                                    <td>@item.MonthLabel</td>
+                                    <td>@String.Format("{0:N0}", item.Revenue)đ</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="2">
+                                    <div class="empty-box">
+                                        <i class="fas fa-inbox"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

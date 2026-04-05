@@ -1,0 +1,1614 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shop\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shop\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:wwwroot\\js\\cart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\models\\cart\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:models\\cart\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\models\\cart\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:models\\cart\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\drinkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\drinkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\decorator\\drinkdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\decorator\\drinkdecorator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\decorator\\idrink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\decorator\\idrink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\drinks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\drinks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\orderloggerobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\orderloggerobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\orderadminnotificationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\orderadminnotificationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\customernotificationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\customernotificationobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\adapter\\telegramnotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\adapter\\telegramnotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\adapter\\emailnotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\adapter\\emailnotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\adapter\\inotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\adapter\\inotificationadapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\iordersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\iordersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\iorderobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\iorderobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\command\\orderstatuscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\command\\orderstatuscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\command\\ordercommandinvoker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\command\\ordercommandinvoker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\command\\iordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\command\\iordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\checkout\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\checkout\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\orderstatuschangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\orderstatuschangedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\observer\\ordersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\observer\\ordersubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\revenuereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\revenuereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\orderaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\orderaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\cancelledstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\cancelledstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\completedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\completedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\pendingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\pendingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\iorderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\iorderstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\builder\\orderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\builder\\orderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\builder\\iorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\builder\\iorderbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\facade\\checkoutfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\facade\\checkoutfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\paidstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\paidstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\orderstatusvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\orderstatusvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_customerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_customerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_layouttest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_layouttest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\coffeeshopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\coffeeshopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\cafetablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\cafetablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\migrations\\coffeeshopdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:migrations\\coffeeshopdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\migrations\\20251116155122_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:migrations\\20251116155122_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:data\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\shared\\_alertmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\shared\\_alertmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\helpers\\orderstatusmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:helpers\\orderstatusmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\builder\\orderdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\builder\\orderdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\singleton\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\singleton\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\singleton\\iloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\singleton\\iloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\ordercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\orderstatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\orderstatefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\preparingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\preparingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\pendingpaymentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\pendingpaymentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\state\\orderstatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\state\\orderstatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\concretefactories\\ipaymentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\concretefactories\\ipaymentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\concretefactories\\paymentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\concretefactories\\paymentfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\concretefactories\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\concretefactories\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\paypalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\factorymethod\\codservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\factorymethod\\codservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\strategy\\fixedamountdiscountcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\strategy\\fixedamountdiscountcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\strategy\\percentagediscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\strategy\\percentagediscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\strategy\\nodiscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\strategy\\nodiscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\strategy\\idiscountstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\strategy\\idiscountstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\designpatterns\\facade\\icheckoutfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:designpatterns\\facade\\icheckoutfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\views\\checkout\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:views\\checkout\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|d:\\huflit\\mtkpm\\doan\\coffeewebsite\\models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78D346B-BE01-4BE6-BE0D-AFA0BA2169E8}|WebBanNuocMVC.csproj|solutionrelative:models\\viewmodels\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 139,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "cart.js",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\wwwroot\\js\\cart.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\cart.js",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\wwwroot\\js\\cart.js",
+              "RelativeToolTip": "wwwroot\\js\\cart.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-13T11:26:03.091Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDetail.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shop\\ProductDetail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shop\\ProductDetail.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shop\\ProductDetail.cshtml",
+              "RelativeToolTip": "Views\\Shop\\ProductDetail.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAF0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:16:43.402Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shop\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "Views\\Shop\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAwwG8AAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:16:44.626Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CustomerNotificationObserver.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\CustomerNotificationObserver.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\CustomerNotificationObserver.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\CustomerNotificationObserver.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\CustomerNotificationObserver.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T08:02:17.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAwNkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:06:47.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Order.cs",
+              "RelativeDocumentMoniker": "Data\\Order.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Order.cs",
+              "RelativeToolTip": "Data\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:53:55.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DrinkDecorator.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Decorator\\DrinkDecorator.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Decorator\\DrinkDecorator.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Decorator\\DrinkDecorator.cs",
+              "RelativeToolTip": "DesignPatterns\\Decorator\\DrinkDecorator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T10:37:31.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Drink.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Drink.cs",
+              "RelativeDocumentMoniker": "Data\\Drink.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Drink.cs",
+              "RelativeToolTip": "Data\\Drink.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T03:43:31.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "logs.txt",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\logs.txt",
+              "RelativeDocumentMoniker": "logs.txt",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\logs.txt",
+              "RelativeToolTip": "logs.txt",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-17T14:32:40.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T11:21:02.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShopController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "Controllers\\ShopController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:52:48.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TelegramNotificationAdapter.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\TelegramNotificationAdapter.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Adapter\\TelegramNotificationAdapter.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\TelegramNotificationAdapter.cs",
+              "RelativeToolTip": "DesignPatterns\\Adapter\\TelegramNotificationAdapter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T08:00:33.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Data\\OrderDetail.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\OrderDetail.cs",
+              "RelativeToolTip": "Data\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:44:35.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DrinksController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\DrinksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinksController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\DrinksController.cs",
+              "RelativeToolTip": "Controllers\\DrinksController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAALYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T10:32:58.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ShoppingCart.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\Cart\\ShoppingCart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart\\ShoppingCart.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\Cart\\ShoppingCart.cs",
+              "RelativeToolTip": "Models\\Cart\\ShoppingCart.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:54:01.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\Cart\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\Cart\\CartItem.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\Cart\\CartItem.cs",
+              "RelativeToolTip": "Models\\Cart\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T10:39:52.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAIQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T03:43:12.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IDrink.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Decorator\\IDrink.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Decorator\\IDrink.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Decorator\\IDrink.cs",
+              "RelativeToolTip": "DesignPatterns\\Decorator\\IDrink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T10:36:55.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Drinks\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Drinks\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Drinks\\Index.cshtml",
+              "RelativeToolTip": "Views\\Drinks\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-22T10:32:49.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderAdminNotificationObserver.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderAdminNotificationObserver.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\OrderAdminNotificationObserver.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderAdminNotificationObserver.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\OrderAdminNotificationObserver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:19:27.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderLoggerObserver.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderLoggerObserver.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\OrderLoggerObserver.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderLoggerObserver.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\OrderLoggerObserver.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:19:19.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAgwHEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T17:06:47.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:12:45.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EmailNotificationAdapter.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\EmailNotificationAdapter.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Adapter\\EmailNotificationAdapter.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\EmailNotificationAdapter.cs",
+              "RelativeToolTip": "DesignPatterns\\Adapter\\EmailNotificationAdapter.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:28:23.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderDetailsController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\OrderDetailsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderDetailsController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\OrderDetailsController.cs",
+              "RelativeToolTip": "Controllers\\OrderDetailsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:25:13.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "INotificationAdapter.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\INotificationAdapter.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Adapter\\INotificationAdapter.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Adapter\\INotificationAdapter.cs",
+              "RelativeToolTip": "DesignPatterns\\Adapter\\INotificationAdapter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T07:28:01.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IOrderSubject.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\IOrderSubject.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\IOrderSubject.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\IOrderSubject.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\IOrderSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:19:00.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IOrderObserver.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\IOrderObserver.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\IOrderObserver.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\IOrderObserver.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\IOrderObserver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:18:52.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrderStatusCommand.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\OrderStatusCommand.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Command\\OrderStatusCommand.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\OrderStatusCommand.cs",
+              "RelativeToolTip": "DesignPatterns\\Command\\OrderStatusCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwDMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:50:59.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderCommandInvoker.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\OrderCommandInvoker.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Command\\OrderCommandInvoker.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\OrderCommandInvoker.cs",
+              "RelativeToolTip": "DesignPatterns\\Command\\OrderCommandInvoker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:52:14.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAUwL4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:38:04.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IOrderCommand.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\IOrderCommand.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Command\\IOrderCommand.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Command\\IOrderCommand.cs",
+              "RelativeToolTip": "DesignPatterns\\Command\\IOrderCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:50:07.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwCAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T09:46:42.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T11:10:21.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-18T04:24:25.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CheckoutFacade.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Facade\\CheckoutFacade.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Facade\\CheckoutFacade.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Facade\\CheckoutFacade.cs",
+              "RelativeToolTip": "DesignPatterns\\Facade\\CheckoutFacade.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAkwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T07:26:44.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckoutController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T03:46:02.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-22T06:02:39.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OrderSubject.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderSubject.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\OrderSubject.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderSubject.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\OrderSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:19:09.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderStatusChangedEvent.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderStatusChangedEvent.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Observer\\OrderStatusChangedEvent.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Observer\\OrderStatusChangedEvent.cs",
+              "RelativeToolTip": "DesignPatterns\\Observer\\OrderStatusChangedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:18:43.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Payment.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Payment.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Payment.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Payment.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAKAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T13:12:12.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RevenueReport.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\RevenueReport.cs",
+              "RelativeDocumentMoniker": "Data\\RevenueReport.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\RevenueReport.cs",
+              "RelativeToolTip": "Data\\RevenueReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T05:44:39.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CompletedState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\CompletedState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\CompletedState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\CompletedState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\CompletedState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:50.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PendingState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PendingState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\PendingState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PendingState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\PendingState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:07.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IOrderState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\IOrderState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\IOrderState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\IOrderState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\IOrderState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:44:43.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CancelledState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\CancelledState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\CancelledState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\CancelledState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\CancelledState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:59.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "OrderAction.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderAction.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\OrderAction.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderAction.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\OrderAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:43:12.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "OrderBuilder.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\OrderBuilder.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Builder\\OrderBuilder.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\OrderBuilder.cs",
+              "RelativeToolTip": "DesignPatterns\\Builder\\OrderBuilder.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAIwG0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:42:31.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IOrderBuilder.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\IOrderBuilder.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Builder\\IOrderBuilder.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\IOrderBuilder.cs",
+              "RelativeToolTip": "DesignPatterns\\Builder\\IOrderBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:42:10.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "OrderStatusValues.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStatusValues.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\OrderStatusValues.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStatusValues.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\OrderStatusValues.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:44:34.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "PaidState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PaidState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\PaidState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PaidState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\PaidState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:29.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:57:26.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T09:46:36.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "_CustomerLayout.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_CustomerLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_CustomerLayout.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_CustomerLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_CustomerLayout.cshtml",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAHoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T07:25:36.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:53:41.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CafeTablesController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CafeTablesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CafeTablesController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\CafeTablesController.cs",
+              "RelativeToolTip": "Controllers\\CafeTablesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:53:35.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "20251116155122_InitialCreate.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Migrations\\20251116155122_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251116155122_InitialCreate.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Migrations\\20251116155122_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20251116155122_InitialCreate.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:52:29.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "CoffeeShopDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Migrations\\CoffeeShopDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\CoffeeShopDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Migrations\\CoffeeShopDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\CoffeeShopDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:52:25.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Extensions\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\SessionExtensions.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Extensions\\SessionExtensions.cs",
+              "RelativeToolTip": "Extensions\\SessionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:52:17.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Customer.cs",
+              "RelativeDocumentMoniker": "Data\\Customer.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\Customer.cs",
+              "RelativeToolTip": "Data\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:51:58.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-17T06:44:53.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "_AlertMessages.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_AlertMessages.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AlertMessages.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_AlertMessages.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AlertMessages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:44:00.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "_LayoutTest.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_LayoutTest.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutTest.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_LayoutTest.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutTest.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:41:01.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:39:32.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:16:41.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T06:16:40.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "OrderStatusMapper.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Helpers\\OrderStatusMapper.cs",
+              "RelativeDocumentMoniker": "Helpers\\OrderStatusMapper.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Helpers\\OrderStatusMapper.cs",
+              "RelativeToolTip": "Helpers\\OrderStatusMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:50:32.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "OrderDirector.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\OrderDirector.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Builder\\OrderDirector.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Builder\\OrderDirector.cs",
+              "RelativeToolTip": "DesignPatterns\\Builder\\OrderDirector.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T13:42:42.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "OrderContext.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderContext.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\OrderContext.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderContext.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\OrderContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:46:24.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "OrderStateFactory.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStateFactory.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\OrderStateFactory.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStateFactory.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\OrderStateFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:46:09.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "PreparingState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PreparingState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\PreparingState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PreparingState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\PreparingState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:39.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "PendingPaymentState.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PendingPaymentState.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\PendingPaymentState.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\PendingPaymentState.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\PendingPaymentState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:45:19.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "OrderStateBase.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStateBase.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\State\\OrderStateBase.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\State\\OrderStateBase.cs",
+              "RelativeToolTip": "DesignPatterns\\State\\OrderStateBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T12:44:54.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-15T11:06:33.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "ICheckoutFacade.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Facade\\ICheckoutFacade.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Facade\\ICheckoutFacade.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Facade\\ICheckoutFacade.cs",
+              "RelativeToolTip": "DesignPatterns\\Facade\\ICheckoutFacade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T06:46:14.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Index.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T12:14:30.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "FixedAmountDiscountcs.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\FixedAmountDiscountcs.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Strategy\\FixedAmountDiscountcs.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\FixedAmountDiscountcs.cs",
+              "RelativeToolTip": "DesignPatterns\\Strategy\\FixedAmountDiscountcs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:10:32.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "PercentageDiscount.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\PercentageDiscount.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Strategy\\PercentageDiscount.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\PercentageDiscount.cs",
+              "RelativeToolTip": "DesignPatterns\\Strategy\\PercentageDiscount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:09:36.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "NoDiscount.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\NoDiscount.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Strategy\\NoDiscount.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\NoDiscount.cs",
+              "RelativeToolTip": "DesignPatterns\\Strategy\\NoDiscount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:22:26.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "IDiscountStrategy.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\IDiscountStrategy.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Strategy\\IDiscountStrategy.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Strategy\\IDiscountStrategy.cs",
+              "RelativeToolTip": "DesignPatterns\\Strategy\\IDiscountStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:09:00.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "CODService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\CODService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\CODService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\CODService.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\CODService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:19:12.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Success.cshtml",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Views\\Checkout\\Success.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T13:12:11.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:25:12.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "VNPayService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\VNPayService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\VNPayService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\VNPayService.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\VNPayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T09:45:31.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "CheckoutViewModel.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\ViewModels\\CheckoutViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\CheckoutViewModel.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Models\\ViewModels\\CheckoutViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\CheckoutViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:02:56.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-08T17:04:23.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "PaymentFactory.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentFactory.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentFactory.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentFactory.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:51:02.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-08T17:04:08.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\IPaymentService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\IPaymentService.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T09:45:23.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "PayPalService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\PayPalService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\PayPalService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\PayPalService.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\PayPalService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAmwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T09:45:26.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "IPaymentFactory.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\IPaymentFactory.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\IPaymentFactory.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\IPaymentFactory.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\IPaymentFactory.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:47:02.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentMethod.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentMethod.cs",
+              "RelativeToolTip": "DesignPatterns\\FactoryMethod\\ConcreteFactories\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:48:51.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CoffeeShopDbContext.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\CoffeeShopDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\CoffeeShopDbContext.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\CoffeeShopDbContext.cs",
+              "RelativeToolTip": "Data\\CoffeeShopDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T12:43:46.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T17:08:54.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T03:45:42.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "LoggerService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Singleton\\LoggerService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Singleton\\LoggerService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Singleton\\LoggerService.cs",
+              "RelativeToolTip": "DesignPatterns\\Singleton\\LoggerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T16:41:02.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "ILoggerService.cs",
+              "DocumentMoniker": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Singleton\\ILoggerService.cs",
+              "RelativeDocumentMoniker": "DesignPatterns\\Singleton\\ILoggerService.cs",
+              "ToolTip": "D:\\HUFLIT\\MTKPM\\DoAn\\CoffeeWebsite\\DesignPatterns\\Singleton\\ILoggerService.cs",
+              "RelativeToolTip": "DesignPatterns\\Singleton\\ILoggerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T16:41:05.427Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 261,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
