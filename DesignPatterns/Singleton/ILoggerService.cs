@@ -1,4 +1,6 @@
-﻿namespace WebBanNuocMVC.DesignPatterns.Singleton
+﻿
+
+namespace WebBanNuocMVC.DesignPatterns.Singleton
 {
     public interface ILoggerService
     {
@@ -7,3 +9,6 @@
         void LogError(string message, Exception? ex = null);
     }
 }
+
+
+

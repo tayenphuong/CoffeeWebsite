@@ -76,3 +76,35 @@
 [22/03/2026 16:03:48] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Pending' sang 'Preparing'.
 [22/03/2026 16:03:50] INFO: Order #2 changed status from 'Preparing' to 'Completed' at 22/03/2026 16:03:50.
 [22/03/2026 16:03:50] INFO: [ADMIN NOTIFY] Order #2 vừa chuyển từ 'Preparing' sang 'Completed'.
+[29/03/2026 09:48:34] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[29/03/2026 10:56:58] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:13:59] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:29:19] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:31:36] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:33:30] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:40:01] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:42:50] INFO: Bắt đầu thanh toán với phương thức: 
+[29/03/2026 11:42:50] ERROR: Không thể parse phương thức: 
+[29/03/2026 11:42:56] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:44:27] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:52:14] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 11:56:45] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 12:06:06] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 12:10:15] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[29/03/2026 12:11:48] INFO: Order #16 changed status from 'Pending Payment' to 'Paid' at 29/03/2026 12:11:48.
+[29/03/2026 12:11:48] INFO: [ADMIN NOTIFY] Order #16 vừa chuyển từ 'Pending Payment' sang 'Paid'.
+[07/04/2026 15:05:42] INFO: Bắt đầu thanh toán với phương thức: 
+[07/04/2026 15:05:42] ERROR: Không thể parse phương thức: 
+[07/04/2026 15:05:48] INFO: Bắt đầu thanh toán với phương thức: COD
+[07/04/2026 15:06:49] INFO: Order #17 changed status from 'Pending' to 'Preparing' at 07/04/2026 15:06:49.
+[07/04/2026 15:06:49] INFO: [ADMIN NOTIFY] Order #17 vừa chuyển từ 'Pending' sang 'Preparing'.
+[09/04/2026 16:40:35] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[09/04/2026 17:06:02] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[09/04/2026 17:23:14] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[10/04/2026 02:55:10] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin
+[10/04/2026 02:55:27] INFO: LOGIN | ID:2 | USER:customer | ROLE:Customer
+[10/04/2026 04:48:03] INFO: LOGIN | ID:2 | USER:customer | ROLE:Customer
+[10/04/2026 04:49:25] INFO: Bắt đầu thanh toán với phương thức: VNPay
+[10/04/2026 04:52:22] INFO: Order #20 changed status from 'Pending Payment' to 'Paid' at 10/04/2026 04:52:22.
+[10/04/2026 04:52:22] INFO: [ADMIN NOTIFY] Order #20 vừa chuyển từ 'Pending Payment' sang 'Paid'.
+[10/04/2026 04:52:49] INFO: LOGIN | ID:1 | USER:admin | ROLE:Admin

@@ -1,348 +1,417 @@
+@using WebBanNuocMVC.Data
+@using WebBanNuocMVC.DesignPatterns.Proxy
+
 @{
     ViewData["Title"] = "KOFFEE - Admin Dashboard";
     Layout = "_AdminLayout";
+
+
+    var monthlyRevenue = ViewBag.MonthlyRevenue as List<MonthlyRevenueItem> ?? new List<MonthlyRevenueItem>();
+    var todayText = DateTime.Now.ToString("dddd, dd MMMM yyyy");
 }
 
-<div class="container-fluid">
-    
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0" style="color: #3a2c1f; font-weight: bold;">
-            <i class="fas fa-tachometer-alt mr-2" style="color: #da9f5b;"></i>
-            KOFFEE Admin Dashboard
-        </h1>
-        <div class="text-muted">
-            <i class="far fa-calendar-alt mr-2"></i>
-            @DateTime.Now.ToString("dddd, dd MMMM yyyy")
-        </div>
-    </div>
-
-    
-    <div class="row">
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card stat-card stat-card-primary shadow-sm h-100">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="stat-label text-uppercase mb-1">
-                                Total Products
-                            </div>
-                            <div class="stat-value">@ViewBag.TotalDrinks</div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="stat-icon">
-                                <i class="fas fa-coffee"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card stat-card stat-card-success shadow-sm h-100">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="stat-label text-uppercase mb-1">
-                                Total Revenue
-                            </div>
-                            <div class="stat-value">@ViewBag.TotalRevenue.ToString("N0")đ</div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="stat-icon">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card stat-card stat-card-info shadow-sm h-100">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="stat-label text-uppercase mb-1">
-                                Total Orders
-                            </div>
-                            <div class="stat-value">@ViewBag.TotalOrders</div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="stat-icon">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card stat-card stat-card-warning shadow-sm h-100">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="stat-label text-uppercase mb-1">
-                                Total Customers
-                            </div>
-                            <div class="stat-value">@ViewBag.TotalCustomers</div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="card shadow-sm">
-                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
-                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
-                        <i class="fas fa-bolt mr-2"></i>Quick Actions
-                    </h5>
-                </div>
-                <div class="card-body" style="background-color: #f8f9fa;">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-3">
-                            <a asp-controller="Drinks" asp-action="Index" class="quick-action-btn">
-                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #da9f5b 0%, #c88a45 100%);">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <div class="quick-action-text">
-                                    <h6>Manage Products</h6>
-                                    <small>Add, edit or remove products</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3">
-                            <a asp-controller="Categories" asp-action="Index" class="quick-action-btn">
-                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #28a745 0%, #218838 100%);">
-                                    <i class="fas fa-list"></i>
-                                </div>
-                                <div class="quick-action-text">
-                                    <h6>Manage Categories</h6>
-                                    <small>Organize product categories</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3">
-                            <a asp-controller="Orders" asp-action="Index" class="quick-action-btn">
-                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                                <div class="quick-action-text">
-                                    <h6>View Orders</h6>
-                                    <small>Manage customer orders</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-3">
-                            <a asp-controller="Customers" asp-action="Index" class="quick-action-btn">
-                                <div class="quick-action-icon" style="background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="quick-action-text">
-                                    <h6>View Customers</h6>
-                                    <small>Customer information</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="row">
-        <div class="col-12">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header" style="background: linear-gradient(135deg, #3a2c1f 0%, #2c1f14 100%); border: none;">
-                    <h5 class="m-0 font-weight-bold" style="color: #da9f5b;">
-                        <i class="fas fa-clock mr-2"></i>Recent Orders
-                    </h5>
-                </div>
-                <div class="card-body" style="padding: 0;">
-                    @if (ViewBag.RecentOrders != null && ((List<WebBanNuocMVC.Data.Order>)ViewBag.RecentOrders).Count > 0)
-                    {
-                        <div class="table-responsive">
-                            <table class="table table-hover mb-0">
-                                <thead style="background-color: #f8f9fa;">
-                                    <tr>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Order ID</th>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Customer</th>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Date</th>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Total</th>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Status</th>
-                                        <th style="border-top: none; color: #3a2c1f; font-weight: 600;">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var order in (List<WebBanNuocMVC.Data.Order>)ViewBag.RecentOrders)
-                                    {
-                                        <tr>
-                                            <td><strong>#@order.OrderId</strong></td>
-                                            <td>
-                                                <i class="fas fa-user-circle mr-1" style="color: #da9f5b;"></i>
-                                                @(order.Customer?.CustomerName ?? "Guest")
-                                            </td>
-                                            <td>
-                                                <i class="far fa-calendar mr-1" style="color: #6c757d;"></i>
-                                                @order.OrderDate?.ToString("dd/MM/yyyy HH:mm")
-                                            </td>
-                                            <td><strong style="color: #28a745;">@((order.TotalAmount ?? 0).ToString("N0"))đ</strong></td>
-                                            <td>
-                                                <span class="badge badge-pill badge-@(order.Status == "Completed" ? "success" : order.Status == "Pending" ? "warning" : "info")">
-                                                    @order.Status
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <a asp-controller="Orders" asp-action="Details" asp-route-id="@order.OrderId" 
-                                                   class="btn btn-sm" style="background-color: #da9f5b; color: white;">
-                                                    <i class="fas fa-eye"></i> View
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="text-center py-5">
-                            <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
-                            <p class="text-muted">No orders yet.</p>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <style>
-    /* Statistics Cards */
+    .dashboard-page {
+        padding: 18px 8px 30px 8px;
+    }
+
+    .dashboard-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #2b1d12;
+    }
+
+        .dashboard-title i {
+            color: #d79a4d;
+        }
+
+    .dashboard-date {
+        font-size: 15px;
+        color: #7f8896;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+
     .stat-card {
-        border: none;
-        border-radius: 10px;
-        transition: transform 0.3s, box-shadow 0.3s;
+        background: #fff;
+        border-radius: 14px;
+        padding: 16px 18px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 110px;
+        position: relative;
         overflow: hidden;
     }
-    
-    .stat-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+
+        .stat-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+        }
+
+    .stat-orange::before {
+        background: #d79a4d;
     }
-    
-    .stat-card-primary {
-        border-left: 4px solid #da9f5b;
+
+    .stat-green::before {
+        background: #2eb85c;
     }
-    
-    .stat-card-success {
-        border-left: 4px solid #28a745;
+
+    .stat-blue::before {
+        background: #25a9e0;
     }
-    
-    .stat-card-info {
-        border-left: 4px solid #17a2b8;
+
+    .stat-yellow::before {
+        background: #f0b90b;
     }
-    
-    .stat-card-warning {
-        border-left: 4px solid #ffc107;
-    }
-    
+
     .stat-label {
-        font-size: 0.75rem;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #9aa3af;
         font-weight: 700;
-        color: #858796;
-        letter-spacing: 0.5px;
+        letter-spacing: .4px;
+        margin-bottom: 8px;
     }
-    
+
     .stat-value {
-        font-size: 1.75rem;
-        font-weight: 800;
-        color: #3a2c1f;
+        font-size: 22px;
+        font-weight: 700;
+        color: #1f2937;
+        line-height: 1.2;
     }
-    
+
     .stat-icon {
-        width: 60px;
-        height: 60px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
+        background: #f5f6f8;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #f8f9fa;
-    }
-    
-    .stat-icon i {
-        font-size: 1.5rem;
-        color: #858796;
-    }
-    
-    /* Quick Action Buttons */
-    .quick-action-btn {
-        display: flex;
-        align-items: center;
-        padding: 1.5rem;
-        background: white;
-        border-radius: 10px;
-        text-decoration: none;
-        transition: all 0.3s;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        height: 100%;
-    }
-    
-    .quick-action-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        text-decoration: none;
-    }
-    
-    .quick-action-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1rem;
+        color: #8b90a0;
+        font-size: 24px;
         flex-shrink: 0;
     }
-    
-    .quick-action-icon i {
-        font-size: 1.5rem;
-        color: white;
+
+    .panel-box {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        overflow: hidden;
+        margin-bottom: 18px;
     }
-    
-    .quick-action-text h6 {
-        margin: 0;
-        color: #3a2c1f;
-        font-weight: 600;
-        font-size: 0.95rem;
+
+    .panel-header {
+        background: linear-gradient(90deg, #3b2616 0%, #5a3b24 100%);
+        color: #d79a4d;
+        font-weight: 700;
+        padding: 11px 16px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
-    
-    .quick-action-text small {
-        color: #6c757d;
-        font-size: 0.75rem;
+
+    .panel-body {
+        padding: 18px;
     }
-    
-    /* Table Styling */
-    .table-hover tbody tr:hover {
-        background-color: #f8f9fa;
+
+    .quick-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
     }
-    
-    .card {
+
+    .quick-card {
+        background: #fff;
+        border: 1px solid #eef0f3;
+        border-radius: 14px;
+        padding: 16px;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transition: .2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+
+        .quick-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+            text-decoration: none;
+        }
+
+    .quick-icon {
+        width: 48px;
+        height: 48px;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        flex-shrink: 0;
     }
-    
-    .card-header {
-        border-radius: 10px 10px 0 0 !important;
+
+    .quick-orange {
+        background: #d79a4d;
+    }
+
+    .quick-green {
+        background: #2eb85c;
+    }
+
+    .quick-blue {
+        background: #25a9e0;
+    }
+
+    .quick-yellow {
+        background: #f0b90b;
+    }
+
+    .quick-title {
+        font-weight: 700;
+        color: #2a2f36;
+        margin-bottom: 3px;
+    }
+
+    .quick-text {
+        font-size: 13px;
+        color: #8a93a1;
+        margin: 0;
+    }
+
+    .revenue-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .revenue-table thead th {
+            background: linear-gradient(90deg, #3b2616 0%, #5a3b24 100%);
+            color: #f0b15a;
+            font-weight: 700;
+            padding: 12px 14px;
+            border: none;
+            text-align: left;
+        }
+
+        .revenue-table tbody td {
+            padding: 13px 14px;
+            border: 1px solid #edf0f3;
+            color: #374151;
+            background: #fff;
+        }
+
+        .revenue-table tbody tr:nth-child(even) td {
+            background: #fbfcfd;
+        }
+
+    .empty-box {
+        min-height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #b0b7c3;
+        font-size: 42px;
+    }
+
+    @@media (max-width: 1200px) {
+        .stats-grid,
+        .quick-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .stats-grid,
+        .quick-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .dashboard-title {
+            font-size: 20px;
+        }
     }
 </style>
+
+@if (ViewBag.HasAccess == false)
+{
+    <div class="alert alert-danger mt-3">
+        <strong>@ViewBag.RoleLabel</strong> - @ViewBag.AccessMessage
+    </div>
+}
+else
+{
+    <div class="dashboard-page">
+        <div class="dashboard-topbar">
+            <h2 class="dashboard-title">
+                <i class="fas fa-tachometer-alt"></i>
+                KOFFEE Admin Dashboard
+            </h2>
+
+            <div class="dashboard-date">
+                <i class="far fa-calendar-alt"></i>
+                @todayText
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-orange">
+                <div>
+                    <div class="stat-label">Total Products</div>
+                    <div class="stat-value">@ViewBag.TotalDrinks</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-green">
+                <div>
+                    <div class="stat-label">Total Revenue</div>
+                    <div class="stat-value">@String.Format("{0:N0}", ViewBag.RevenueThisMonth ?? 0)đ</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-blue">
+                <div>
+                    <div class="stat-label">Total Orders</div>
+                    <div class="stat-value">@ViewBag.TotalOrders</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            <div class="stat-card stat-yellow">
+                <div>
+                    <div class="stat-label">Total Customers</div>
+                    <div class="stat-value">@ViewBag.TotalCustomers</div>
+                </div>
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-box">
+            <div class="panel-header">
+                <i class="fas fa-bolt"></i>
+                Quick Actions
+            </div>
+            <div class="panel-body">
+                <div class="quick-grid">
+                    <a asp-controller="Drinks" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-orange">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">Manage Products</div>
+                            <p class="quick-text">Add, edit or remove products</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Categories" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-green">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">Manage Categories</div>
+                            <p class="quick-text">Organize product categories</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Orders" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-blue">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">View Orders</div>
+                            <p class="quick-text">Manage customer orders</p>
+                        </div>
+                    </a>
+
+                    <a asp-controller="Customers" asp-action="Index" class="quick-card">
+                        <div class="quick-icon quick-yellow">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="quick-title">View Customers</div>
+                            <p class="quick-text">Customer information</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-box">
+            <div class="panel-header">
+                <i class="fas fa-chart-line"></i>
+                Recent Revenue
+            </div>
+            <div class="panel-body p-0">
+                <table class="revenue-table">
+                    <thead>
+                        <tr>
+                            <th style="width:50%;">Month</th>
+                            <th>Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (monthlyRevenue.Any())
+                        {
+                            @foreach (var item in monthlyRevenue)
+                            {
+                                <tr>
+                                    <td>@item.MonthLabel</td>
+                                    <td>@String.Format("{0:N0}", item.Revenue)đ</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="2">
+                                    <div class="empty-box">
+                                        <i class="fas fa-inbox"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}

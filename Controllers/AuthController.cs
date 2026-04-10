@@ -76,19 +76,27 @@ namespace WebBanNuocMVC.Controllers
 
             TempData["Success"] = "Login successful!";
 
+            // 1. Ghi log thành công
             _logger.LogInfo($"LOGIN | ID:{account.AccountId} | USER:{account.Username} | ROLE:{account.Role}");
 
+            // 2. ƯU TIÊN 1: Nếu là Admin và muốn vào trang Admin
+            if (string.Equals(account.Role, "Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                // Nếu có returnUrl chỉ định trang admin cụ thể thì về đó, không thì về Dashboard
+                if (!string.IsNullOrWhiteSpace(returnUrl) && returnUrl.Contains("Admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    return Redirect(returnUrl);
+                }
+                return RedirectToAction("Dashboard", "Admin");
+            }
+
+            // 3. ƯU TIÊN 2: Nếu có returnUrl (thường dành cho Customer muốn quay lại trang đang xem dở)
             if (!string.IsNullOrWhiteSpace(returnUrl))
             {
                 return Redirect(returnUrl);
             }
 
-            if (string.Equals(returnToAdmin, "true", StringComparison.OrdinalIgnoreCase) &&
-                string.Equals(account.Role, "Admin", StringComparison.OrdinalIgnoreCase))
-            {
-                return RedirectToAction("Dashboard", "Admin", new { returnToAdmin = "true" });
-            }
-
+            // 4. MẶC ĐỊNH: Về trang chủ
             return RedirectToAction("Index", "Home");
         }
 

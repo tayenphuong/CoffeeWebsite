@@ -102,30 +102,30 @@ namespace WebBanNuocMVC.Controllers
             });
         }
         [HttpPost]
-        public IActionResult UpdateCart(int drinkId, string size, int quantity) // Thêm tham số size
+        public IActionResult UpdateCart(int drinkId, string size, int quantity)
         {
+            // 1. Lấy giỏ hàng từ Session
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>(CartSessionKey);
-            if (cart != null)
+            if (cart == null) return Json(new { success = false, message = "Giỏ hàng trống" });
+
+            // 2. Gọi hàm update trong Model (Hàm này bạn đã sửa có tham số size rồi)
+            cart.UpdateQuantity(drinkId, size, quantity);
+
+            // 3. QUAN TRỌNG: Lưu lại vào Session ngay lập tức để đồng bộ dữ liệu
+            HttpContext.Session.SetObjectAsJson(CartSessionKey, cart);
+
+            // 4. Tìm lại item vừa update để lấy Subtotal mới trả về cho UI
+            var updatedItem = cart.Items.FirstOrDefault(i => i.DrinkId == drinkId && i.Size == size);
+
+            return Json(new
             {
-                // Gọi hàm UpdateQuantity mới mà chúng ta vừa sửa trong ShoppingCart
-                cart.UpdateQuantity(drinkId, size, quantity);
-
-                HttpContext.Session.SetObjectAsJson(CartSessionKey, cart);
-
-                // Tìm lại item vừa update để lấy Subtotal mới
-                var updatedItem = cart.Items.FirstOrDefault(i => i.DrinkId == drinkId && i.Size == size);
-
-                return Json(new
-                {
-                    success = true,
-                    newTotal = cart.TotalAmount,
-                    discountAmount = cart.DiscountAmount,
-                    finalTotal = cart.FinalAmount,
-                    cartCount = cart.TotalItems,
-                    itemSubtotal = updatedItem?.Subtotal ?? 0
-                });
-            }
-            return Json(new { success = false, message = "Cart not found" });
+                success = true,
+                newTotal = cart.TotalAmount,
+                discountAmount = cart.DiscountAmount,
+                finalTotal = cart.FinalAmount + 20000, // Tổng cuối cùng bao gồm ship
+                cartCount = cart.TotalItems,
+                itemSubtotal = updatedItem?.Subtotal ?? 0
+            });
         }
 
         [HttpPost]

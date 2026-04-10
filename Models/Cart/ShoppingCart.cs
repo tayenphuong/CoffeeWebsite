@@ -9,7 +9,18 @@ namespace WebBanNuocMVC.Models.Cart
         public IDiscountStrategy DiscountStrategy { get; set; } = new NoDiscount();
 
         public decimal TotalAmount => Items.Sum(i => i.Subtotal);
-        public decimal DiscountAmount => DiscountStrategy.CalculateDiscount(TotalAmount);
+        public decimal DiscountAmount
+        {
+            get
+            {
+                if (DiscountStrategy != null)
+                {
+                    _lastDiscount = DiscountStrategy.CalculateDiscount(TotalAmount);
+                }
+                return _lastDiscount;
+            }
+        }
+        private decimal _lastDiscount;
         public decimal FinalAmount => TotalAmount - DiscountAmount;
         public int TotalItems => Items.Sum(i => i.Quantity);
 

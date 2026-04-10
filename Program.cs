@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+ï»¿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using WebBanNuocMVC.DesignPatterns.Observer;
 using WebBanNuocMVC.DesignPatterns.Singleton;
@@ -9,6 +9,8 @@ using WebBanNuocMVC.DesignPatterns.FactoryMethod;
 using WebBanNuocMVC.DesignPatterns.FactoryMethod.ConcreteFactories;
 using WebBanNuocMVC.DesignPatterns.Command;
 using WebBanNuocMVC.DesignPatterns.Adapter;
+using WebBanNuocMVC.DesignPatterns.Chain;
+using WebBanNuocMVC.DesignPatterns.Proxy;
 
 namespace WebBanNuocMVC
 {
@@ -75,14 +77,22 @@ namespace WebBanNuocMVC
             builder.Services.AddSingleton<OrderCommandInvoker>();
 
             // Adapter
-            // ??ng ký c? hai Adapter cho cùng m?t Interface
+            // ??ng kÃ½ c? hai Adapter cho cÃ¹ng m?t Interface
             builder.Services.AddScoped<INotificationAdapter, EmailNotificationAdapter>();
             builder.Services.AddScoped<INotificationAdapter, TelegramNotificationAdapter>();
 
-            // ??ng ký các thành ph?n h? tr?
+            // ??ng kÃ½ cÃ¡c thÃ nh ph?n h? tr?
             builder.Services.AddHttpClient(); // Cho Telegram
             builder.Services.AddScoped<IOrderObserver, CustomerNotificationObserver>();
+            //Proxy
+            builder.Services.AddHttpContextAccessor();
 
+            builder.Services.AddScoped<RealAdminDashboardSubject>();
+            builder.Services.AddScoped<IAdminDashboardSubject, AdminDashboardProxy>();
+
+
+            //chain
+            builder.Services.AddScoped<CheckoutChainService>();
             var app = builder.Build();
 
             using (var scope = app.Services.CreateScope())

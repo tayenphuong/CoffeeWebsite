@@ -1,36 +1,38 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebBanNuocMVC.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using WebBanNuocMVC.DesignPatterns.Proxy;
 
 namespace WebBanNuocMVC.Controllers
 {
-    //[Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private readonly CoffeeShopDbContext _context;
+        private readonly IAdminDashboardSubject _dashboardSubject;
 
-        public AdminController(CoffeeShopDbContext context)
+        public AdminController(IAdminDashboardSubject dashboardSubject)
         {
-            _context = context;
+            _dashboardSubject = dashboardSubject;
         }
 
         public async Task<IActionResult> Dashboard()
         {
-            ViewBag.TotalDrinks = await _context.Drinks.CountAsync();
-            ViewBag.TotalCategories = await _context.Categories.CountAsync();
-            ViewBag.TotalOrders = await _context.Orders.CountAsync();
-            ViewBag.TotalCustomers = await _context.Customers.CountAsync();
+            var result = await _dashboardSubject.GetDashboardAsync();
 
-            ViewBag.RecentOrders = await _context.Orders
-                .Include(o => o.Customer)
-                .OrderByDescending(o => o.OrderDate)
-                .Take(5)
-                .ToListAsync();
+            ViewBag.HasAccess = result.HasAccess;
+            ViewBag.RoleLabel = result.RoleLabel;
+            ViewBag.AccessMessage = result.AccessMessage;
 
-            ViewBag.TotalRevenue = await _context.Orders
-                .Where(o => o.Status == "Completed" || o.Status == "Paid")
-                .SumAsync(o => o.TotalAmount ?? 0);
+            if (result.HasAccess && result.Data != null)
+            {
+                ViewBag.TotalDrinks = result.Data.TotalDrinks;
+                ViewBag.TotalCustomers = result.Data.TotalCustomers;
+                ViewBag.TotalOrders = result.Data.TotalOrders;
+                ViewBag.TotalAccounts = result.Data.TotalAccounts;
+
+                ViewBag.RevenueToday = result.Data.RevenueToday;
+                ViewBag.RevenueThisMonth = result.Data.RevenueThisMonth;
+                ViewBag.RevenueThisYear = result.Data.RevenueThisYear;
+                ViewBag.MonthlyRevenue = result.Data.MonthlyRevenue;
+            }
 
             return View();
         }

@@ -12,6 +12,7 @@ using System.Linq;
 using WebBanNuocMVC.DesignPatterns.State;
 using WebBanNuocMVC.DesignPatterns.Observer;
 using WebBanNuocMVC.DesignPatterns.Builder;
+using WebBanNuocMVC.DesignPatterns.Singleton;
 
 namespace WebBanNuocMVC.DesignPatterns.Facade
 {
@@ -22,19 +23,22 @@ namespace WebBanNuocMVC.DesignPatterns.Facade
         private readonly CoffeeShopDbContext _context;
         private readonly IPaymentFactory _paymentFactory;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ILoggerService _logger;
 
         public CheckoutFacade(
          CoffeeShopDbContext context,
          IPaymentFactory paymentFactory,
          IHttpContextAccessor httpContextAccessor,
          IOrderSubject orderSubject,
-         OrderDirector orderDirector)
+         OrderDirector orderDirector,
+         ILoggerService logger)
         {
             _context = context;
             _paymentFactory = paymentFactory;
             _httpContextAccessor = httpContextAccessor;
             _orderSubject = orderSubject;
             _orderDirector = orderDirector;
+            _logger = logger;
         }
 
         public async Task<string> PlaceOrderAndGetPaymentUrl(
@@ -44,8 +48,12 @@ namespace WebBanNuocMVC.DesignPatterns.Facade
             IUrlHelper urlHelper,
             string scheme)
         {
+            // Thêm dòng này để xem thực tế nó nhận được gì
+            _logger.LogInfo($"Bắt đầu thanh toán với phương thức: {paymentMethod}");
+
             if (!Enum.TryParse(paymentMethod, true, out PaymentMethod methodEnum))
             {
+                _logger.LogError($"Không thể parse phương thức: {paymentMethod}");
                 throw new Exception("Phương thức thanh toán không hợp lệ");
             }
 
@@ -54,8 +62,8 @@ namespace WebBanNuocMVC.DesignPatterns.Facade
 
             // 2. Xác định trạng thái ban đầu
             var initialStatus = (methodEnum == PaymentMethod.COD)
-     ? OrderStatusValues.Pending
-     : OrderStatusValues.PendingPayment;
+             ? OrderStatusValues.Pending
+             : OrderStatusValues.PendingPayment;
 
             // 3. Tạo Đơn hàng (Hàm này giờ đã dùng được User thông qua HttpContextAccessor)
             var order = await CreateOrder(customer, cart, initialStatus);
@@ -79,7 +87,7 @@ namespace WebBanNuocMVC.DesignPatterns.Facade
             var paymentUrl = paymentService.CreatePaymentUrl(
                 order.OrderId,
                 finalTotal,
-                $"Thanh toan don hang #{order.OrderId}",
+                $"Thanhtoandonhang",
                 returnUrl!
             );
 

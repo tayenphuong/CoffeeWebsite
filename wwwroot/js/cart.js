@@ -17,7 +17,13 @@ function addToCart(drinkId, quantity = 1) {
         }
     });
 }
-function updateQuantity(drinkId, size, newQty) {
+function updateQuantity(drinkId, size, change) {
+    // 1. Lấy ô input dựa trên ID và Size
+    var input = $(`#qty-${drinkId}-${size}`);
+    var currentQty = parseInt(input.val());
+    var newQty = currentQty + change;
+
+    // 2. Không cho giảm xuống dưới 1
     if (newQty < 1) return;
 
     $.ajax({
@@ -25,28 +31,26 @@ function updateQuantity(drinkId, size, newQty) {
         type: 'POST',
         data: {
             drinkId: drinkId,
-            size: size, // Đảm bảo có size gửi lên
-            quantity: newQty
+            size: size,
+            quantity: newQty // Gửi số lượng MỚI thực tế
         },
         success: function (response) {
             if (response.success) {
-                // Cập nhật đúng ô input dựa trên ID kết hợp Size
-                $(`#qty-${drinkId}-${size}`).val(newQty);
+                // 3. Cập nhật số lượng vào ô input
+                input.val(newQty);
 
-                // Cập nhật đúng ô Subtotal dựa trên ID kết hợp Size
+                // 4. Cập nhật các con số khác trên giao diện (Ajax mượt mà)
                 $(`#subtotal-${drinkId}-${size}`).text(response.itemSubtotal.toLocaleString() + 'đ');
-
-                // Cập nhật tổng quát giỏ hàng
                 $('#cart-subtotal').text(response.newTotal.toLocaleString() + 'đ');
                 $('#cart-discount').text('-' + response.discountAmount.toLocaleString() + 'đ');
-
-                // Tính lại Total cuối cùng (bao gồm phí ship 20k)
-                var finalWithShip = response.finalTotal + 20000;
-                $('#cart-total').text(finalWithShip.toLocaleString() + 'đ');
-
-                // Cập nhật badge giỏ hàng trên Header (nếu có)
+                $('#cart-total').text(response.finalTotal.toLocaleString() + 'đ');
                 $('.cart-count').text(response.cartCount + ' items');
+            } else {
+                alert(response.message);
             }
+        },
+        error: function () {
+            alert("Lỗi kết nối server");
         }
     });
 }
